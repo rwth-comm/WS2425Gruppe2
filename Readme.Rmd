@@ -4,12 +4,12 @@ author: "Emilia"
 date: "2024-10-24"
 output: md_document
 ---
-#Teammitglieder 
-* Monique 
-* Zehra
-* Elcin
-* Emilia
+# Teammitglieder 
+*   Monique 
+*   Zehra
+*   Elcin
+*   Emilia
 
-#Forschungsfrage
+# Forschungsfrage
 
-#Faktorenraum 
+# Faktorenraum 
