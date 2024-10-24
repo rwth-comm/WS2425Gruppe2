@@ -1,12 +1,5 @@
-# Teammitglieder
+\#Teammitglieder \* Monique \* Zehra \* Elcin \* Emilia
 
--   Emilia
--   Monique
--   Zehra
--   Elcin 
+\#Forschungsfrage
 
-# Forschungsfrage
-
-# Faktorenraum
-
-Hier wird später ein Bild eingebunden.
+\#Faktorenraum

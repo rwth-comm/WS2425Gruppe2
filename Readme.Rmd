@@ -1,20 +1,15 @@
 ---
 title: "Untitled"
-author: "Zehra"
+author: "Emilia"
+date: "2024-10-24"
 output: md_document
-date: "2024-10-21"
 ---
-
-# Teammitglieder
-* Emilia
+#Teammitglieder 
 * Monique 
 * Zehra
 * Elcin
+* Emilia
 
+#Forschungsfrage
 
-# Forschungsfrage
-
-
-# Faktorenraum
-Hier wird später ein Bild eingebunden.
-
+#Faktorenraum 
