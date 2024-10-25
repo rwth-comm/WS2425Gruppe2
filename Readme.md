@@ -1,4 +1,4 @@
-# Teammeadglieder
+# Teammitglieder
 
 -   Kirachen
 -   Beckers
