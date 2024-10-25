@@ -1,9 +1,10 @@
-# Teammitglieder
+# Teammeadglieder
 
--   Monique
--   Zehra
--   Elcin
--   Emilia
+-   Kirachen
+-   Beckers
+-   Konar
+-   Momot
+-   Aksoy
 
 # Forschungsfrage
 
