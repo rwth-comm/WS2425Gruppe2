@@ -14,4 +14,4 @@ der Sperrmüllanmeldung?
 
 # Faktorenraum
 
-\#Operationalisierung
+# Operationalisierung

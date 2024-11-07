@@ -15,4 +15,4 @@ Welche Faktoren beeinflussen die Akzeptanz und die Privatsphären-Wahrnehmung be
 
 # Faktorenraum
 
-#Operationalisierung
+# Operationalisierung
