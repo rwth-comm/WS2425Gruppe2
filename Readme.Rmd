@@ -11,7 +11,5 @@ date: "2024-10-25"
 * Momot
 * Aksoy
 
-
 # Forschungsfrage
-
 # Faktorenraum
