@@ -1,22 +1,10 @@
 
-<<<<<<< HEAD
 # Teammitglieder
 
 -   Emilia
 -   Monique
 -   Zehra
 -   Elcin 
-
-
-# Faktorenraum
->>>>>>> 02aa74d9cc9c45c9a78f11b553b51ae203cdf317
-=======
-# Teammitglieder
-
--   Beckers
--   Konar
--   Momot
--   Aksoy
 
 # Forschungsfrage
 
