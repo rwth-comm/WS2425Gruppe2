@@ -8,7 +8,7 @@
 -   Elcin 
 
 
-Hier wird später ein Bild eingebunden.
+
 =======
 # Teammitglieder
 
