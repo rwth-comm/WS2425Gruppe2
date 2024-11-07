@@ -13,3 +13,5 @@ Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel
 der Sperrmüllanmeldung?
 
 # Faktorenraum
+
+\#Operationalisierung
