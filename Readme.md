@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Teammitglieder
 
 -   Beckers
@@ -17,13 +18,16 @@ der Sperrmüllanmeldung?
 
 # Operationalisierung
 =======
+=======
+=======
+>>>>>>> 7d5557a8287bfde309dde8cd88b48df34d1fa088
 
 # Teammitglieder
 
 -   Emilia
 -   Monique
 -   Zehra
--   Elcin 
+-   Elcin
 
 # Forschungsfrage
 
@@ -33,7 +37,8 @@ Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel
 der Sperrmüllanmeldung?
 
 # Faktorenraum
->>>>>>> 7c8f9ef694b46c022a596c27d842d7b30e0bfca5
+
+Readme\_files/Faktorenraum.jpeg
 
 # Operationalisierung
 >>>>>>> 7b28995553e6ba30b4b306907c537da0dc4e4af2

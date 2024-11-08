@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Untitled"
 output: md_document
@@ -40,6 +41,15 @@ der Sperrmüllanmeldung?
 # Operationalisierung
 >>>>>>> 7b28995553e6ba30b4b306907c537da0dc4e4af2
 =======
+=======
+---
+title: "Untitled"
+author: "Gruppe 2"
+output: md_document
+date: "2024-10-21"
+---
+=======
+>>>>>>> 7d5557a8287bfde309dde8cd88b48df34d1fa088
 
 # Teammitglieder
 
