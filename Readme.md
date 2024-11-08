@@ -15,7 +15,7 @@ der Sperrmüllanmeldung?
 # Faktorenraum
 
 <figure>
-<img src="Readme_files/Faktorenraum.jpeg" alt="Faktorenraum" />
+<img src="images/Faktorenraum.jpeg" alt="Faktorenraum" />
 <figcaption aria-hidden="true">Faktorenraum</figcaption>
 </figure>
 
