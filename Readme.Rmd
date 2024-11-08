@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Untitled"
 output: md_document
@@ -38,3 +39,24 @@ der Sperrmüllanmeldung?
 
 # Operationalisierung
 >>>>>>> 7b28995553e6ba30b4b306907c537da0dc4e4af2
+=======
+
+# Teammitglieder
+
+-   Emilia
+-   Monique
+-   Zehra
+-   Elcin 
+
+# Forschungsfrage
+
+Welche Faktoren beeinflussen die Akzeptanz und die
+Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
+Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel
+der Sperrmüllanmeldung?
+
+# Faktorenraum
+Readme_files/Faktorenraum.jpeg
+
+# Operationalisierung
+>>>>>>> b9f64acad2586f4079b0235368fee9ca52422b62
