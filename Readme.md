@@ -1,10 +1,11 @@
+=======
 
 # Teammitglieder
 
 -   Emilia
 -   Monique
 -   Zehra
--   Elcin 
+-   Elcin
 
 # Forschungsfrage
 
@@ -14,6 +15,7 @@ Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel
 der Sperrmüllanmeldung?
 
 # Faktorenraum
->>>>>>> 7c8f9ef694b46c022a596c27d842d7b30e0bfca5
+
+Readme\_files/Faktorenraum.jpeg
 
 # Operationalisierung
