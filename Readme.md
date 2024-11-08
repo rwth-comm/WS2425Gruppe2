@@ -20,3 +20,14 @@ der Sperrmüllanmeldung?
 </figure>
 
 # Operationalisierung
+
+Um die den individuellen Faktor “Technologieaffinität” für den
+Fragebogen zu operationalisieren, greifen wir auf die Kurzskala
+“Technikbereitschaft” (TB, technology commitment) zurück. Diese Skala
+setzte sich aus folgenden Dimensionen zusammen:
+
+-   Technikakzeptanz
+-   Technikkompetenz
+-   Technikkontrollüberzeugung
+
+(Neyer, F.J., Felber, J. & Gebhardt, C.)
