@@ -14,8 +14,9 @@ der Sperrmüllanmeldung?
 
 # Faktorenraum
 
-Readme\_files/Faktorenraum.jpeg
+<figure>
+<img src="Readme_files/Faktorenraum.jpeg" alt="Faktorenraum" />
+<figcaption aria-hidden="true">Faktorenraum</figcaption>
+</figure>
 
 # Operationalisierung
-
-> > > > > > > b9f64acad2586f4079b0235368fee9ca52422b62

@@ -1,8 +1,10 @@
 ---
 title: "Untitled"
+author: "Gruppe 2"
 output: md_document
-date: "2024-10-25"
+date: "2024-10-21"
 ---
+
 # Teammitglieder
 
 -   Emilia
@@ -14,11 +16,10 @@ date: "2024-10-25"
 
 Welche Faktoren beeinflussen die Akzeptanz und die
 Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
-Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel
-der Sperrmüllanmeldung?
+Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel der Sperrmüllanmeldung?
 
 # Faktorenraum
-Readme_files/Faktorenraum.jpeg
+![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
 # Operationalisierung
->>>>>>> b9f64acad2586f4079b0235368fee9ca52422b62
+
