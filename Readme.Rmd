@@ -21,6 +21,6 @@ Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel
 der Sperrmüllanmeldung?
 
 # Faktorenraum
-Readme_files/Faktorenraum.jpeg
+![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
 # Operationalisierung
