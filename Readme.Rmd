@@ -22,6 +22,7 @@ Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel der Sper
 
 # Faktorenraum
 ![Faktorenraum](images/Faktorenraum.jpeg)
+
 > Gefällt mir ebenfalls sehr gut, manchmal sind die Bezugsgrößen aber etwas unklar. Ich habe Sie so verstanden, dass Sie sich auf eines der drei Szenarien fokussieren, korrekt? An welcher Stelle im Fragebogen soll das Szenario platziert werden? Der Faktor "Usability" direkt am Anfang klingt z.B. direkt nach abhängiger Variable, die man erst nach dem Szenario abfragen kann. Bitte überlegen Sie bei jedem Faktor nochmal, ob das etwas grundsätzliches ist oder etwas, was sich spezifisch auf dem Chatbot bezieht. Bei spezifischen Dingen müssen wir für den echten Fragebogen leider schauen, dass wir nicht zu viel abfragen. 
 
 # Operationalisierung
