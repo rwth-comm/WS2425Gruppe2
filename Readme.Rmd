@@ -47,8 +47,7 @@ date: "2024-10-21"
 # Forschungsfrage
 
 Welche Faktoren beeinflussen die Akzeptanz und die
-Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
-Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel der Sperrmüllanmeldung?
+Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots zur Unterstützung bei Formularprozessen am Beispiel der Sperrmüllanmeldung?
 
 > Feedback JRH: Wie im Seminar bereits besprochen, ist die Forschungsfrage handwerklich völlig in Ordnung. Es ist eine reine Geschmacksfrage, aber man darf das noch kürzen, wenn man möchte: "... KI-Chatbots zur Unterstützung bei Formularprozessen." wäre z.B. auch völlig fein. 
 
