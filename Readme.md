@@ -9,13 +9,7 @@
 
 Welche Faktoren beeinflussen die Akzeptanz und die
 Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots zur
-Unterstützung bei Formularprozessen am Beispiel der Sperrmüllanmeldung?
-
-> Feedback JRH: Wie im Seminar bereits besprochen, ist die
-> Forschungsfrage handwerklich völlig in Ordnung. Es ist eine reine
-> Geschmacksfrage, aber man darf das noch kürzen, wenn man möchte: “…
-> KI-Chatbots zur Unterstützung bei Formularprozessen.” wäre z.B. auch
-> völlig fein.
+Unterstützung bei Formularprozessen?
 
 # Faktorenraum
 
@@ -37,27 +31,9 @@ Unterstützung bei Formularprozessen am Beispiel der Sperrmüllanmeldung?
 
 # Operationalisierung
 
-Um die den individuellen Faktor “Technologieaffinität” für den
-Fragebogen zu operationalisieren, greifen wir auf die Kurzskala
-“Technikbereitschaft” (TB, technology commitment) zurück. Diese Skala
-setzte sich aus folgenden Dimensionen zusammen:
-
--   Technikakzeptanz
--   Technikkompetenz
--   Technikkontrollüberzeugung
-
-(Neyer, F.J., Felber, J. & Gebhardt, C.)
-
-> Spannende Skala! Die kannte ich bisher noch nicht. Bei
-> Technikaffinität muss ich aber leider die Konsistenz-Karte ziehen und
-> darauf bestehen, dass wir ATI verwenden. Die Aufgabe haben Sie aber
-> selbstverständlich erledigt. Dieser Abschnitt ist für die Zukunft eher
-> als Liste gedacht, z.B.:
->
-> -   Technikaffinität: Affinity towards technology interaction (ATI)
->     nach [Franke et
->     al. (2019)](10.1080/10447318.2018.1456150 "Franke, T., Attig, C., & Wessel, D. (2019). A Personal Resource for Technology Interaction: Development and Validation of the Affinity for Technology Interaction (ATI) Scale. International Journal of Human–Computer Interaction, 35(6), 456-467, DOI: 10.1080/10447318.2018.1456150")
->     in X Items.
+Technikaffinität: Affinity towards technology interaction (ATI) nach
+[Franke et
+al. (2019)](10.1080/10447318.2018.1456150 "Franke, T., Attig, C., & Wessel, D. (2019). A Personal Resource for Technology Interaction: Development and Validation of the Affinity for Technology Interaction (ATI) Scale. International Journal of Human–Computer Interaction, 35(6), 456-467, DOI: 10.1080/10447318.2018.1456150")
 
 # Hypothesen
 
