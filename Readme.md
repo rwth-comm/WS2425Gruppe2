@@ -43,12 +43,23 @@ Je höher die Technikaffinität der Nutzenden über KI, desto höher ist die
 Nutzungsakzeptanz. (Pearson-Korrelation: Zwischen Technikaffinität UV
 und Nutzungsakzeptanz AV)
 
+> Handwerklich super, finde ich aber sprachlich schwierig. Vielleicht
+> eher: Es gibt einen positiven Zusammenhang zwischen Technikaffinität
+> und Nutzungsintention?
+
 Je höher das Alter der Nutzenden, desto höher die Datenschutzbedenken.
 (Pearson-Korrelation: Zwischen Alter UV und Datenschutzbedenken AV)
+
+> Datenschutzbedenken sind im Sinne des Fragebogens eher
+> Privacy-Bedenken, aber Hypothese ist gut!
 
 Je höher das Vertrauen in die Technik, desto höher ist die
 Nutzungsakzeptanz. (Pearson-Korrelation: Zwischen Vertrauen in die
 Technologie UV und Datenschutzbedenken AV)
+
+> Da wir einen gemeinsamen Fragebogen erstellen, kann es sein, dass wir
+> hieraus einen Zusammenhang zwischen Vertrauen in den Chatbot und
+> Nutzungsintenion machen müssen.
 
 Komplexe Zusammenhangshypothesen:
 
@@ -57,22 +68,39 @@ Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung.
 (Multiple lineare Regression: Zwischen usability UV1 sowie
 Datensicherheit UV2 und Privatsphären-Wahrnehmung AV)
 
+> Für Regression finde ich die Formulierung “je desto” schwierig. Über
+> diese Hypothese sollten wir im Seminar nochmal sprechen.
+
 Einfache Unterschiedshypothesen: Personen mit hoher Technikaffinität
 zeigen eine höhere Nutzungsakzeptanz gegenüber dem KI-Chatbot als
 Personen mit geringer Technikaffinität.
 
+> Ich finde den Begriff Nutzungsakzeptanz etwas irreführend. Akzeptanz
+> wird in den meisten Modellen als Nutzungsintention operationalisiert.
+> Hier wäre eine Zusammenhangshypothese geeigneter. Es gibt einen
+> positiven Zusammenhang zwischen Technikaffinität und
+> Nutzungsintention?
+
 Die Technikaffinität ist bei jüngeren Nutzenden höher als bei älteren
 Nutzenden. (Unverbundener T-Test: Zwischen Alter UV und Technikaffinität
 AV)
+
+> Handwerklich super, passt aber inhaltlich nicht zur Forschungsfrage.
 
 Personen die digitale Medien häufiger nutzen, haben eine höhere
 Akzeptanz des KI-Chatbots, als Personen die selten digitale Medien
 nutzen. (Unverbundener T-Test: Zwischen Häufigkeit der Nutzung von
 digitalen Medien UV und Nutzungsakzeptanz AV)
 
+> Der entsprechende Faktor fehlt im Faktorenraum, aber sonst finde ich
+> die Hypothese spannend.
+
 Die Nutzungsakzeptanz ist nach der Nutzung des KI-Chatbots höher als
 vorher. (Verbundener T-Test: Zwischen vorher/ nachher UV und
 Nutzungsakzeptanz AV)
+
+> Vorsicht, der Fragebogen bietet uns nicht die Möglichkeit, den Chatbot
+> wirklich zu nutzen. Wir haben kein vorher/nachher.
 
 Komplexe Unterschiedshypothesen:
 
@@ -81,3 +109,8 @@ positivere Privatsphären-Wahrnehmung des Chatbots als ältere und
 technikferne Nutzende. (F-Test MANOVA: Zwischen Alter UV1 &
 Technikaffinität UV2 und Nutzungsakzeptanz AV1 & wahrgenommene
 Privatsphäre und Datensicherheit AV2)
+
+> Diese Hypothese finde ich richtig stark, weil der Gruppenvergleich so
+> spezifisch ist. Sprachlich aber bitte nochmal überarbeiten:
+> Nutzungakzeptanz ist Nutzungsintention und das Gegenteil von
+> technikaffin ist technikavers.
