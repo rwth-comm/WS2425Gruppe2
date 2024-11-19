@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Untitled"
 author: "Gruppe 2"
@@ -18,17 +16,11 @@ date: "2024-10-21"
 # Forschungsfrage
 
 Welche Faktoren beeinflussen die Akzeptanz und die
-<<<<<<< HEAD
 Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
-Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel
-der Sperrmüllanmeldung?
+Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
 # Faktorenraum
 Readme_files/Faktorenraum.jpeg
-
-# Operationalisierung
-=======
-Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots zur Unterstützung bei Formularprozessen?
 
 # Faktorenraum
 ![Faktorenraum](images/Faktorenraum.jpeg)
@@ -90,4 +82,3 @@ Jüngere und technikaffine Nutzende haben eine höhere Akzeptanz und eine positi
 (F-Test MANOVA:  Zwischen Alter UV1 & Technikaffinität UV2 und Nutzungsakzeptanz AV1 & wahrgenommene Privatsphäre und Datensicherheit AV2)
 
 > Diese Hypothese finde ich richtig stark, weil der Gruppenvergleich so spezifisch ist. Sprachlich aber bitte nochmal überarbeiten: Nutzungakzeptanz ist Nutzungsintention und das Gegenteil von technikaffin ist technikavers. 
->>>>>>> 5a0641e08bfe6184dee4b9956dd19361c210da3c

@@ -1,73 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Teammitglieder
-
--   Beckers
--   Konar
--   Momot
--   Aksoy
-
-# Forschungsfrage
-Welche Faktoren beeinflussen die Akzeptanz und die Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel der Sperrmüllanmeldung?
-
-# Faktorenraum
-
-![Faktorenraum](readme_files/Faktorenraum.jpeg)
-=======
-
-<<<<<<< HEAD
-# Teammitglieder
-
--   Emilia
--   Monique
--   Zehra
--   Elcin 
-
-
-# Faktorenraum
->>>>>>> 02aa74d9cc9c45c9a78f11b553b51ae203cdf317
-=======
-# Teammitglieder
-
--   Beckers
--   Konar
--   Momot
--   Aksoy
-
-# Forschungsfrage
-
-Welche Faktoren beeinflussen die Akzeptanz und die
-Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
-Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel
-der Sperrmüllanmeldung?
-
-# Faktorenraum
->>>>>>> 7c8f9ef694b46c022a596c27d842d7b30e0bfca5
->>>>>>> 5ef91bcadd6d8de5001cd02aa9ca38e740fa17b4
-=======
-
-# Teammitglieder
-
--   Emilia
--   Monique
--   Zehra
--   Elcin 
-
-# Forschungsfrage
-
-Welche Faktoren beeinflussen die Akzeptanz und die
-Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
-Kommunalverwaltung zur Unterstützung bei Formularprozessen am Beispiel
-der Sperrmüllanmeldung?
-
-# Faktorenraum
->>>>>>> 7c8f9ef694b46c022a596c27d842d7b30e0bfca5
-
-# Operationalisierung
->>>>>>> b9f64acad2586f4079b0235368fee9ca52422b62
-=======
-# Teammitglieder
+> > > > > > > 5a0641e08bfe6184dee4b9956dd19361c210da3c \# Teammitglieder
 
 -   Emilia
 -   Monique
@@ -77,8 +8,12 @@ der Sperrmüllanmeldung?
 # Forschungsfrage
 
 Welche Faktoren beeinflussen die Akzeptanz und die
-Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots zur
-Unterstützung bei Formularprozessen?
+Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
+Kommunalverwaltung zur Unterstützung bei Formularprozessen?
+
+# Faktorenraum
+
+Readme\_files/Faktorenraum.jpeg
 
 # Faktorenraum
 
@@ -183,4 +118,3 @@ Privatsphäre und Datensicherheit AV2)
 > spezifisch ist. Sprachlich aber bitte nochmal überarbeiten:
 > Nutzungakzeptanz ist Nutzungsintention und das Gegenteil von
 > technikaffin ist technikavers.
->>>>>>> 5a0641e08bfe6184dee4b9956dd19361c210da3c
