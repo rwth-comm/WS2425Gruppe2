@@ -10,6 +10,7 @@ raw.short <- raw[,c(6,9,18:54)]
 
 dput(names(raw.short))
 
+
 names(raw.short) <- c("Duration", "ResponseId", "Age", "Gender", "Edu", "JobType", 
                       "bf_1n", "bf_2", "bf_3n", "bf_4n", "bf_5n", 
                       "bf_6", "bf_7n", "bf_8", "bf_9", "bf_10", 
@@ -59,4 +60,5 @@ scores$alpha
 data <- bind_cols(raw.short, scores$scores)
 
 write_rds(data, "data/data.rds")
+
 
