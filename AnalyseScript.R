@@ -59,3 +59,4 @@ scores$alpha
 data <- bind_cols(raw.short, scores$scores)
 
 write_rds(data, "data/data.rds")
+
