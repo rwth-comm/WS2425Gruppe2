@@ -20,19 +20,17 @@ names(raw.short) <- c("Duration", "ResponseId", "Age", "Gender", "Edu", "JobType
                       "wrfq_6", "wrfq_7", "wrfq_8", "wrfq_9", 
                       "svi_1n", "svi_2n", "svi_3", "svi_4n", "svi_5")
 
+raw.short$age <- as.numeric(raw.short$age)
 
-raw.short$Age <- as.numeric(raw.short$Age)
+raw.short$gender <- as.factor(recode(raw.short$gender,`1` = "Männlich", `2` = "Weiblich",`3` = "Divers"))
 
-raw.short$Gender <- as.factor(recode(raw.short$Gender, 
-                                     `1` = "Männlich", `2` = "Weiblich",`3` = "Divers"))
-
-raw.short$Edu <- ordered(raw.short$Edu, levels = c(1:5),
+raw.short$edu <- ordered(raw.short$edu, levels = c(1:5),
                          labels = c("Haupt- oder Realschulabschluss",
                                     "Fach-/Hochschulreife (Abitur)",
                                     "Ausbildung",
                                     "Hochschulabschluss",
                                     "Promotion"))
-
+raw.short$JobType
 raw.short$JobType <- as.factor(recode(raw.short$JobType, 
                                       `1` = "In Ausbildung / Studium", 
                                       `2` = "Arbeitnehmer/-in und Studierende/-r",
@@ -57,8 +55,9 @@ scores <- scoreItems(schluesselliste, items = raw.short, min = 1, max = 6)
 
 scores$alpha
 
+scores$scores
+
 data <- bind_cols(raw.short, scores$scores)
 
 write_rds(data, "data/data.rds")
-
 
