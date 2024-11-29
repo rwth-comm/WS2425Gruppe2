@@ -41,7 +41,18 @@ Vertrauen: Trust_in_Automation_Questionnaire (TiA): https://github.com/moritzkoe
 
 Nutzung Digitaler Medien: (Häufigkeit der Nutzung) Wie oft nutzen Sie digitale Medien? (nie, einmal im Monat, mehrmals im Monat, einmal pro Woche, mehrmals in der Woche, täglich) 
 
-Datenschutzbedenken: Development of measures of online privacy concern and protection for use on the Internet (IUIPC); (Buchanan, Tom & Joinson, Adam & Paine Schofield, Carina & Reips, Ulf-Dietrich. (2007). Development of measures of online privacy concern and protection for use on the Internet. Journal of the American Society for Information Science and Technology. 58. 157-165. 10.1002/asi.20459.)
+Datenschutzbedenken: Development of measures of online privacy concern and protection for use on the Internet (IUIPC); (Buchanan, Tom & Joinson, Adam & Paine Schofield, Carina & Reips, Ulf-Dietrich. (2007). Development of measures of online privacy concern and protection for use on the Internet. Journal of the American Society for Information Science and Technology. Alter: Wie alt sind Sie? (in Jahren)
+
+Bildungsabschluss: Was ist ihr höchster Bildungsabschluss? ((Noch) kein Schulabschluss Hauptschulabschluss Realschulabschluss Abitur Höher als Abitur)
+
+Nutzungsintention: User Acceptance of Information Technology: Toward a Unified View (UTAUT)
+Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User Acceptance of Information Technology: Toward a Unified View. MIS Quarterly, 27(3), 425–478. https://doi.org/10.2307/30036540
+
+Vertrauen: Trust_in_Automation_Questionnaire (TiA): https://github.com/moritzkoerber/TiA_Trust_in_Automation_Questionnaire/blob/master/Vertrauen-in-Automation_TiA_Fragebogen.pdf
+
+Nutzung Digitaler Medien: (Häufigkeit der Nutzung) Wie oft nutzen Sie digitale Medien? (nie, einmal im Monat, mehrmals im Monat, einmal pro Woche, mehrmals in der Woche, täglich) 
+
+Datenschutzbedenken: Development of measures of online privacy concern and protection for use on the Internet (IUIPC); (Buchanan, Tom & Joinson, Adam & Paine Schofield, Carina & Reips, Ulf-Dietrich. (2007). Development of measures of online privacy concern and protection for use on the Internet. Journal of the American Society for Information Science and Technology. http://dx.doi.org/10.1002/asi.20459)
 
 # Hypothesen 
 
