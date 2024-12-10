@@ -22,17 +22,6 @@ Readme\_files/Faktorenraum.jpeg
 <figcaption aria-hidden="true">Faktorenraum</figcaption>
 </figure>
 
-> Gefällt mir ebenfalls sehr gut, manchmal sind die Bezugsgrößen aber
-> etwas unklar. Ich habe Sie so verstanden, dass Sie sich auf eines der
-> drei Szenarien fokussieren, korrekt? An welcher Stelle im Fragebogen
-> soll das Szenario platziert werden? Der Faktor “Usability” direkt am
-> Anfang klingt z.B. direkt nach abhängiger Variable, die man erst nach
-> dem Szenario abfragen kann. Bitte überlegen Sie bei jedem Faktor
-> nochmal, ob das etwas grundsätzliches ist oder etwas, was sich
-> spezifisch auf dem Chatbot bezieht. Bei spezifischen Dingen müssen wir
-> für den echten Fragebogen leider schauen, dass wir nicht zu viel
-> abfragen.
-
 # Operationalisierung
 
 Technikaffinität: Affinity towards technology interaction (ATI) nach
@@ -71,10 +60,11 @@ Einfache Zusammenhangshypothesen:
 
 H1: Es gibt einen positiven Zusammenhang zwischen der Technikaffinität
 und der Nutzungsintention. (Pearson-Korrelation: Zwischen
-Technikaffinität UV und Nutzungsakzeptanz AV)
+Technikaffinität UV und Nutzungsintention AV)
 
-H2: Je höher das Alter der Nutzenden, desto höher die Privacy-Bedenken.
-(Pearson-Korrelation: Zwischen Alter UV und Datenschutzbedenken AV)
+H2: Je höher das Alter der Nutzenden, desto höher die
+Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und
+Privatsphäredisposition AV)
 
 H3: Je höher das Vertrauen in den KI-Chatbot, desto höher ist die
 Nutzungsintenion. (Pearson-Korrelation: Zwischen Vertrauen in die
@@ -82,10 +72,10 @@ Technologie UV und Datenschutzbedenken AV)
 
 Komplexe Zusammenhangshypothesen:
 
-H4: Je höher die usability und die wahrgenommene Datensicherheit des
-Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung.
+H4: Je höher die usability und die wahrgenommene Privatsphäredisposition
+des Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung.
 (Multiple lineare Regression: Zwischen usability UV1 sowie
-Datensicherheit UV2 und Privatsphären-Wahrnehmung AV)
+Privatsphäredisposition UV2 und Privatsphären-Wahrnehmung AV)
 
 Einfache Unterschiedshypothesen:
 
@@ -97,16 +87,17 @@ Technikaffinität AV)
 H6:Personen die digitale Medien häufiger nutzen, haben eine höhere
 Akzeptanz des KI-Chatbots, als Personen die selten digitale Medien
 nutzen. (Unverbundener T-Test: Zwischen Häufigkeit der Nutzung von
-digitalen Medien UV und Nutzungsakzeptanz AV)
+digitalen Medien UV und Nutzungsintention AV)
 
-H7: Die Akzeptanz des KI-Chatbots ist geringer, bevor ein zusätzlicher
-Hinweis zum KI-Chatbot gegeben wird, als danach. (Verbundener T-Test:
-Zwischen vorher/ nachher UV und Nutzungsakzeptanz AV)
+H7: Die Nutzungsintention des KI-Chatbots ist geringer, bevor ein
+zusätzlicher Hinweis zum KI-Chatbot gegeben wird, als danach.
+(Verbundener T-Test: Zwischen vorher/ nachher UV und Nutzungsintention
+AV)
 
 Komplexe Unterschiedshypothesen:
 
-H9: Jüngere und technikaffine Nutzende haben eine höhere
+H8: Jüngere und technikaffine Nutzende haben eine höhere
 Nutzungsintention und eine positivere Privatsphären-Wahrnehmung des
 Chatbots als ältere und technikavers Nutzende. (F-Test MANOVA: Zwischen
-Alter UV1 & Technikaffinität UV2 und Nutzungsakzeptanz AV1 &
+Alter UV1 & Technikaffinität UV2 und Nutzungsintention AV1 &
 wahrgenommene Privatsphäre und Datensicherheit AV2)
