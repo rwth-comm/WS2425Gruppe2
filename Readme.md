@@ -72,10 +72,17 @@ Technologie UV und Datenschutzbedenken AV)
 
 Komplexe Zusammenhangshypothesen:
 
+<<<<<<< HEAD
 H4: Je höher die usability und die wahrgenommene Privatsphäredisposition
 des Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung.
 (Multiple lineare Regression: Zwischen usability UV1 sowie
 Privatsphäredisposition UV2 und Privatsphären-Wahrnehmung AV)
+=======
+H4: Je höher die usability und die wahrgenommene Privatsphäredisposition des
+Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung.
+(Multiple lineare Regression: Zwischen usability UV1 sowie
+Privatsphärsedisposition UV2 und Privatsphären-Wahrnehmung AV)
+>>>>>>> a068ae9236cbbadb49eff4fbadc18bdd084e6e69
 
 Einfache Unterschiedshypothesen:
 
