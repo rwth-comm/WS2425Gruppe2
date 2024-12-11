@@ -64,8 +64,6 @@ raw.short$Mn <- ordered(raw.short$Mn, levels = c(1:6),
                      "täglich"))
 
 
-# Qualitätskontrolle ----
-
 # Skalenwerte berechnen ----
 
 schluesselliste <- list(
