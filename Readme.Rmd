@@ -5,7 +5,7 @@ output: md_document
 date: "2024-10-21"
 ---
 
->>>>>>> 5a0641e08bfe6184dee4b9956dd19361c210da3c
+
 # Teammitglieder
 
 -   Emilia
