@@ -7,61 +7,61 @@ source("qualtricshelpers.R")
 raw <- load_qualtrics_csv("data/Methodenseminar+WS2425_6.+Dezember+2024_13.12.csv")
 
 # Rohdaten filtern ----
-raw %>% 
-  filter(Progress == 100) %>% 
-  filter(Status == 2) -> raw
+raw <-filter(raw,Progress == 100) 
+raw <-filter(raw,Status == 2)
 
 
 # Überflüssige Rohdaten entfernen ----
-raw.short <- raw[,c(-1:-18)]
+raw.short <- raw[,c(6,9,19:64,98:110)]
 
-# Variablen umbenennen ----
-generate_codebook(raw.short, "data/Methodenseminar+WS2425_6.+Dezember+2024_13.12.csv","data/codebook.csv")
-codebook <- read_codebook("data/codebook_final.csv")
-names(raw.short) <- codebook$variable
+dput(names(raw.short))
+
+names(raw.short) <- c("Duration", "ResponseId", "Gender", "Age", "Bildungsabschluss","Wohnort", "Income", 
+    "big5_1", "big5_2n", 
+    "nzv_1n", "nzv_2", "nzv_3", 
+    "ati_1", "ati_2", "ati_3n", "ati_4", "ati_5", "ati_6n", "ati_7", "ati_8n", "ati_9", 
+    "Mn", 
+    "pd_1n", "pd_2n", "pd_3", 
+    "egki_1n", "egki_2", "egki_3n", "egki_4", "egki_5n", 
+    "expkic_1", "expkic_2", "expkic_3", 
+    "ezkv_1", "ezkv_2", "ezkv_3", "ezkv_4", "ezkv_5", "ezkv_6n", 
+    "bsszo_1", "bsszo_2n", "bsszo_3n", "bsszo_4n", "bsszo_5", 
+    "egn_1", "egn_2", "egn_3", "egn_4", 
+    "biatt_c_1", "biatt_c_2", "biatt_c_3", "biatt_c_4", "biatt_c_5", "biatt_c_6", 
+    "pw_c_1n", "pw_c_2n", "pw_c_3n", "pw_c_4", "pw_c_5", 
+    "tia_c_1", "tia_c_2")
+
 
 # Korrekte Datentypen zuordnen ----
-raw.short$Age %>% 
-  as.numeric(raw.short$age) -> raw.short$Age
+raw.short$Age <- as.numeric(raw.short$Age)
 
-raw.short$gender %>% 
-  recode(`1` = "Männlich", `2` = "Weiblich", `3` = "Divers", `4` = "Keine Angabe") %>%
-as.factor() -> raw.short$gender
+raw.short$Gender <- as.factor(recode(raw.short$Gender, 
+  `1` = "Männlich", `2` = "Weiblich", `3` = "Divers", `4` = "Keine Angabe"))
 
-raw.short$Bildungsabschluss %>% 
-  ordered(levels = c(1:5),
-          labels = c("(noch)Kein Schulabschluss",
+raw.short$Bildungsabschluss <- ordered(raw.short$Bildungsabschluss,levels = c(1:5),
+          labels = c("(noch) kein Schulabschluss",
                      "Hauptschulabschluss",
                      "Realschulabschluss",
                      "Abitur",
-                     "Hochschulabschluss")) -> raw.short$Bildungsabschluss
+                     "Hochschulabschluss"))
 
-raw.short$JobType %>% recode(`1` = "In Ausbildung / Studium", 
-                             `2` = "Arbeitnehmer/-in und Studierende/-r",
-                             `3` = "Arbeitnehmer/-in",
-                             `4` = "Arbeitgeber/-in",
-                             `5` = "Selbstständig ohne Mitarbeiter",
-                             `6` = "Rentner/-in") %>% 
-  as.factor() -> raw.short$JobType
+raw.short$Wohnort <- as.factor(recode(raw.short$Wohnort,
+  `1` = "Ländlich", `2` = "Wohnort/Kleinstadt", `3` = "Großstadt"))
+  
 
-raw.short$Wohnort %>% 
-  recode(`1` = "Ländlich", `2` = "Wohnort/Kleinstadt", `3` = "Großstadt") %>%
-  as.factor() -> raw.short$Wohnort
-
-raw.short$income %>% 
-  ordered(levels = c(1:4),
+raw.short$Income <- ordered(raw.short$Income, levels = c(1:4),
           labels = c("unter 25.000€",
                      "25.000€ bis 49.999€",
                      "50.000€ bis 75.000€",
-                     "über 75.000€")) -> raw.short$income
-raw.short$MN %>% 
-  ordered(levels = c(1:6),
+                     "über 75.000€"))
+
+raw.short$Mn <- ordered(raw.short$Mn, levels = c(1:6),
           labels = c("nie",
                      "einmal im Monat",
                      "mehrmals pro Monat",
                      "einmal pro Woche",
                      "mehrmals in der Woche",
-                     "täglich"))-> raw.short$MN
+                     "täglich"))
 
 
 # Qualitätskontrolle ----
@@ -69,29 +69,21 @@ raw.short$MN %>%
 # Skalenwerte berechnen ----
 
 schluesselliste <- list(
-  BIG5 = c("BIG5_1","-BIG5_2n"),
-  NZV = c("-NZV_1n","NZV_2","NZV_3"),
-  ATI = c("ATI_1","ATI_2","-ATI_3n","ATI_4","ATI_5","-ATI_6n","ATI_7","-ATI_8n","ATI_9"),
-  PD = c("-PD_1n","-PD_2n", "PD_3"),
-  EGKI = c("-EKGI_1n","EKGI_2","-EKGI_3n","EKGI_4","-EKGI_5n"),
-  EXPKIC = c("EXPKIC_1","XPKIC_2","XPKIC_3"),
-  EZKV = c("EZKV_1","EZKV_2","EZKV_3","EZKV_4","EZKV_5","EZKV_6"),
-  BSSZO = c("BSSZO_1","BSSZO_2","BSSZO_3","BSSZO_4","BSSZO_5"),
-  EGN = c("EGN_1","EGN_2","EGN_3","EGN_4"),
-  BIATT = c("BIATT_A_1","BIATT_A_2","BIATT_A_3","BIATT_A_4","BIATT_A_5","BIATT_A_6"),
-  PW = c("PW_A_1","PW_A_2","PW_A_3","PW_A_4","PW_A_5"),
-  TIA = c("TIA_A_1","TIA_A_2"),
-  BIATT = c("BIATT_B_1","BIATT_B_2","BIATT_B_3","BIATT_B_4","BIATT_B_5","BIATT_B_6"),
-  PW = c("PW_B_1","PW_B_2","PW_B_3","PW_B_4","PW_B_5"),
-  TIA = c("TIA_B_1","TIA_B_2"),
-  USA = c("USA_B_1","USA_B_2","USA_B_3","USA_B_4", "USA_B_5"),
-  EZA = c("EZA_B_1","EZA_B_2"),
-  BIATT = c("BIATT_C_1","BIATT_C_2","BIATT_C_3","BIATT_C_4","BIATT_C_5","BIATT_C_6"),
-  PW = c("PW_C_1","PW_C_2","PW_C_3","PW_C_4","PW_C_5"),
-  TIA = c("TIA_C_1","TIA_C_2"),
+  BIG5 = c("big5_1","-big5_2n"),
+  NZV = c("-nzv_1n","nzv_2","nzv_3"),
+  ATI = c("ati_1","ati_2","-ati_3n","ati_4","ati_5","-ati_6n","ati_7","-ati_8n","ati_9"),
+  PD = c("-pd_1n","-pd_2n", "pd_3"),
+  EGKI = c("-egki_1n","egki_2","-egki_3n","egki_4","-egki_5n"),
+  EXPKIC = c("expkic_1","expkic_2","expkic_3"),
+  EZKV = c("ezkv_1","ezkv_2","ezkv_3","ezkv_4","ezkv_5","-ezkv_6n"),
+  BSSZO = c("bsszo_1","-bsszo_2n","-bsszo_3n","-bsszo_4n","bsszo_5"),
+  EGN = c("egn_1","egn_2","egn_3","egn_4"),
+  BIATT = c("biatt_c_1","biatt_c_2","biatt_c_3","biatt_c_4","biatt_c_5","biatt_c_6"),
+  PW = c("-pw_c_1n","-pw_c_2n","-pw_c_3n","pw_c_4","pw_c_5"),
+  TIA = c("tia_c_1","tia_c_2")
 )
 
-scores <- scoreItems(schluesselliste, items = raw.short, min = 1, max =9)
+scores <- scoreItems(schluesselliste, items = raw.short, min = 1, max =6)
 
 scores$alpha
 
@@ -101,6 +93,7 @@ data <- bind_cols(raw.short, scores$scores)
 
 # Daten exportieren ----
 write_rds(data, "data/data.rds")
+
 
 
 ### Poweranalyse ###
