@@ -5,6 +5,14 @@ output: md_document
 date: "2024-10-21"
 ---
 
+```{r}
+library(tidyverse)
+library(ggthemes)
+library(AachenColorPalette)
+
+df <- readRDS("data/data.rds")
+```
+
 
 # Teammitglieder
 
@@ -46,14 +54,26 @@ Datenschutzbedenken: Development of measures of online privacy concern and prote
 
 Einfache Zusammenhangshypothesen:
 
-H1: Es gibt einen positiven Zusammenhang zwischen der Technikaffinität und der Nutzungsintention.
-(Pearson-Korrelation: Zwischen Technikaffinität UV und Nutzungsintention AV)
+H1: Es gibt einen positiven Zusammenhang zwischen der Technikaffinität und digitaler Mediennutzung
+(Spearman-Korrelation: Zwischen Technikaffinität UV und Digitale Mediennutzung AV)
+```{r}
+cor.test(df$ATI,as.numeric(df$Mn), method = "spearman")
+```
+
 
 H2: Je höher das Alter der Nutzenden, desto höher die Privatsphäredisposition.
 (Pearson-Korrelation: Zwischen Alter UV und Privatsphäredisposition AV)
+```{r}
+cor.test(df$Age,df$PD, method = "pearson")
+```
 
-H3: Je höher das Vertrauen in den KI-Chatbot, desto höher ist die Nutzungsintenion.
+
+H3: Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die Datenschutzbedenken.
 (Pearson-Korrelation: Zwischen Vertrauen in die Technologie UV und Datenschutzbedenken AV)
+```{r}
+cor.test(df$NZV,df$PW, method = "pearson")
+```
+
 
 Komplexe Zusammenhangshypothesen:
 
@@ -63,16 +83,32 @@ H4: Je höher die usability und die wahrgenommene Privatsphäredisposition des C
 
 Einfache Unterschiedshypothesen: 
 
-H5: Nutzende mit höherem Bildungsabschluss haben eine höhere Nutzungsintention gegenüber dem KI-Chatbot als Nutzende mit niedrigem Bildungsabschluss.
-(Unverbundener T-Test: Zwischen Alter UV und Technikaffinität AV)
+H5: Nutzende mit höherem Bildungsabschluss haben eine höhere Technikaffinität  als Nutzende mit niedrigem Bildungsabschluss.
+(Unverbundener T-Test: Zwischen Bildungsniveau UV und Technikaffinität AV)
+```{r}
+t.test( filter(df, Bildungsabschluss > "Abitur")$ATI , filter(df, Bildungsabschluss < "Abitur")$ATI )
+```
 
-H6:Personen die digitale Medien häufiger nutzen, haben eine höhere Akzeptanz des KI-Chatbots, als Personen die selten digitale Medien nutzen.
-(Unverbundener T-Test: Zwischen Häufigkeit der Nutzung von digitalen Medien UV und Nutzungsintention AV)
+H6: Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung eines KI-Chatbots als Männer.
+(Unverbundener T-Test: Zwischen Geschlecht (UV) und wahrgenommener Privatsphäre (AV)
 
-H7: Die Nutzungsintention des KI-Chatbots ist geringer, bevor ein zusätzlicher Hinweis zum KI-Chatbot gegeben wird, als danach.
-(Verbundener T-Test: Zwischen vorher/ nachher UV und Nutzungsintention AV)
+```{r}
+t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$PW )
+```
+
+H7: Die Nutzungsintention der Stichprobe, gemessen auf einer Skala von 1-6, ist höher als 3.
+(Einfacher T-Test: Nutzungsintention (AV))
+```{r}
+t.test(df$BIATT,mu=3)
+```
+
 
 Komplexe Unterschiedshypothesen:
 
 H8: Jüngere und technikaffine Nutzende haben eine höhere Nutzungsintention und eine positivere Privatsphären-Wahrnehmung des Chatbots als ältere und technikavers Nutzende.
 (F-Test MANOVA: Zwischen Alter UV1 & Technikaffinität UV2 und Nutzungsintention AV1 & wahrgenommene Privatsphäre und Datensicherheit AV2)
+
+```{r}
+
+```
+
