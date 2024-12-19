@@ -4,7 +4,8 @@ library(psych)
 source("qualtricshelpers.R")
 
 # Daten einlesen ----
-raw <- load_qualtrics_csv("data/Methodenseminar+WS2425_6.+Dezember+2024_13.12.csv")
+raw2 <- load_qualtrics_csv("data/Methodenseminar+WS2425_6.+Dezember+2024_13.12.csv")
+raw <- load_qualtrics_csv("data/Testdaten_echter_Fragebogen.csv")
 
 # Rohdaten filtern ----
 raw <-filter(raw,Progress == 100) 
@@ -12,7 +13,9 @@ raw <-filter(raw,Status == 2)
 
 
 # Überflüssige Rohdaten entfernen ----
-raw.short <- raw[,c(6,9,19:64,98:110)]
+raw.short2 <- raw2[,c(6,9,19:62,64,98:110)]
+
+raw.short <- raw[,c(6,9,19:64,94:104)]
 
 dput(names(raw.short))
 
@@ -26,9 +29,9 @@ names(raw.short) <- c("Duration", "ResponseId", "Gender", "Age", "Bildungsabschl
     "expkic_1", "expkic_2", "expkic_3", 
     "ezkv_1", "ezkv_2", "ezkv_3", "ezkv_4", "ezkv_5", "ezkv_6n", 
     "bsszo_1", "bsszo_2n", "bsszo_3n", "bsszo_4n", "bsszo_5", 
-    "egn_1", "egn_2", "egn_3", "egn_4", 
+    "egn_1", "egn_2", "Kontrolle", "egn_4", 
     "biatt_c_1", "biatt_c_2", "biatt_c_3", "biatt_c_4", "biatt_c_5", "biatt_c_6", 
-    "pw_c_1n", "pw_c_2n", "pw_c_3n", "pw_c_4", "pw_c_5", 
+    "pw_c_1n", "pw_c_2n", "pw_c_3n", 
     "tia_c_1", "tia_c_2")
 
 
@@ -75,9 +78,9 @@ schluesselliste <- list(
   EXPKIC = c("expkic_1","expkic_2","expkic_3"),
   EZKV = c("ezkv_1","ezkv_2","ezkv_3","ezkv_4","ezkv_5","-ezkv_6n"),
   BSSZO = c("bsszo_1","-bsszo_2n","-bsszo_3n","-bsszo_4n","bsszo_5"),
-  EGN = c("egn_1","egn_2","egn_3","egn_4"),
+  EGN = c("egn_1","egn_2","egn_4"),
   BIATT = c("biatt_c_1","biatt_c_2","biatt_c_3","biatt_c_4","biatt_c_5","biatt_c_6"),
-  PW = c("-pw_c_1n","-pw_c_2n","-pw_c_3n","pw_c_4","pw_c_5"),
+  PW = c("-pw_c_1n","-pw_c_2n","-pw_c_3n"),
   TIA = c("tia_c_1","tia_c_2")
 )
 
