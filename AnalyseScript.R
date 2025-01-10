@@ -30,7 +30,8 @@ names(raw.short) <- c("Duration", "ResponseId", "Gender", "Age", "Bildungsabschl
     "ezkv_1", "ezkv_2", "ezkv_3", "ezkv_4", "ezkv_5", "ezkv_6n", 
     "bsszo_1", "bsszo_2n", "bsszo_3n", "bsszo_4n", "bsszo_5", 
     "egn_1", "egn_2", "Kontrolle", "egn_4", 
-    "biatt_c_1", "biatt_c_2", "biatt_c_3", "biatt_c_4", "biatt_c_5", "biatt_c_6", 
+    "bi_c_1", "bi_c_2", "bi_c_3", 
+    "att_c_4", "att_c_5", "att_c_6", 
     "pw_c_1n", "pw_c_2n", "pw_c_3n", 
     "tia_c_1", "tia_c_2")
 
@@ -79,7 +80,8 @@ schluesselliste <- list(
   EZKV = c("ezkv_1","ezkv_2","ezkv_3","ezkv_4","ezkv_5","-ezkv_6n"),
   BSSZO = c("bsszo_1","-bsszo_2n","-bsszo_3n","-bsszo_4n","bsszo_5"),
   EGN = c("egn_1","egn_2","egn_4"),
-  BIATT = c("biatt_c_1","biatt_c_2","biatt_c_3","biatt_c_4","biatt_c_5","biatt_c_6"),
+  BI = c("bi_c_1","bi_c_2","bi_c_3"),
+  ATT = c("att_c_4","att_c_5","att_c_6"),
   PW = c("-pw_c_1n","-pw_c_2n","-pw_c_3n"),
   TIA = c("tia_c_1","tia_c_2")
 )

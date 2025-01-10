@@ -55,9 +55,9 @@ Datenschutzbedenken: Development of measures of online privacy concern and prote
 Einfache Zusammenhangshypothesen:
 
 H1: Es gibt einen positiven Zusammenhang zwischen der Technikaffinität und digitaler Mediennutzung
-(Spearman-Korrelation: Zwischen Technikaffinität UV und Digitale Mediennutzung AV)
+(Kendall-Tau: Zwischen Technikaffinität UV und Digitale Mediennutzung AV)
 ```{r}
-cor.test(df$ATI,as.numeric(df$Mn), method = "spearman")
+cor.test(df$ATI,as.numeric(df$Mn), method = "kendall-tau")
 ```
 
 
@@ -96,7 +96,7 @@ H6: Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung eines
 t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$PW )
 ```
 
-H7: Die Nutzungsintention der Stichprobe, gemessen auf einer Skala von 1-6, ist höher als 3.
+H7: Die Nutzungsintention der Stichprobe, gemessen auf einer Skala von 1-6, ist höher als 3,5.
 (Einfacher T-Test: Nutzungsintention (AV))
 ```{r}
 t.test(df$BIATT,mu=3)
