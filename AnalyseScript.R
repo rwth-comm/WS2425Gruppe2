@@ -4,12 +4,12 @@ library(psych)
 source("qualtricshelpers.R")
 
 # Daten einlesen ----
-raw2 <- load_qualtrics_csv("data/Methodenseminar+WS2425_6.+Dezember+2024_13.12.csv")
-raw <- load_qualtrics_csv("data/Testdaten_echter_Fragebogen.csv")
+raw <- load_qualtrics_csv("data/Methodenseminar+WS2425_10.+Januar+2025_09.51.csv")
+
 
 # Rohdaten filtern ----
 raw <-filter(raw,Progress == 100) 
-raw <-filter(raw,Status == 2)
+raw <-filter(raw,Status == 0)
 
 
 # Überflüssige Rohdaten entfernen ----
