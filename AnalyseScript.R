@@ -130,11 +130,10 @@ pwr::pwr.t.test(n = 110, sig.level = 0.05, d = NULL , power = 0.5)
 
 # Qualitätskontrolle ----
 
-raw.short.quality <- careless_indices(raw.short, likert_vector = c(7:39), speeder_analysis = "median/2")
+raw.short.quality <- careless_indices(raw.short, likert_vector = c(7:39), duration_column = "Duration", speeder_analysis = "median/2")
 
 raw.short.quality %>% 
   filter(speeder_flag == FALSE) %>% 
   filter(careless_longstr < 20) %>% 
   filter(careless_psychsyn > 0) %>% 
-  filter(careless_psychant < 0) %>% 
   filter(careless_mahadflag == FALSE) -> raw.short.quality
