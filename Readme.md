@@ -1,4 +1,4 @@
-# Akzeptanz und Privatsphäre von KI-Chatbots in der Verwaltun
+# Akzeptanz und Privatsphäre von KI-Chatbots in der Verwaltung
 
 # Teammitglieder
 
