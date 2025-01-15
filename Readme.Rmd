@@ -59,7 +59,9 @@ Development of measures of online privacy concern and protection for use on the 
 
 **Einfache Zusammenhangshypothesen:**
 
-- **H1:** Es gibt einen positiven Zusammenhang zwischen der Technikaffinität und digitaler Mediennutzung (Kendall-Tau: Zwischen Technikaffinität UV und Digitale Mediennutzung AV)
+- **H1:** Es gibt einen positiven Zusammenhang zwischen der 
+Technikaffinität und digitaler Mediennutzung (Kendall-Tau: Zwischen 
+Technikaffinität UV und Digitale Mediennutzung AV)
 
 ```{r}
 cor.test(df$ATI,as.numeric(df$Mn), method = "kendall-tau")

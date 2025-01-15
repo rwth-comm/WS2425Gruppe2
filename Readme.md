@@ -74,7 +74,7 @@ and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 
 **Einfache Zusammenhangshypothesen:**
 
-- **H1:** Es gibt einen positiven Zusammenhang zwischen der Technikaffinität
+**H1:** Es gibt einen positiven Zusammenhang zwischen der Technikaffinität
 und digitaler Mediennutzung (Spearman-Korrelation: Zwischen
 Technikaffinität UV und Digitale Mediennutzung AV)
 
@@ -93,7 +93,7 @@ Technikaffinität UV und Digitale Mediennutzung AV)
     ##        rho 
     ## 0.02043267
 
-- **H2:** Je höher das Alter der Nutzenden, desto höher die
+**H2:** Je höher das Alter der Nutzenden, desto höher die
 Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und
 Privatsphäredisposition AV)
 
@@ -111,7 +111,7 @@ Privatsphäredisposition AV)
     ##         cor 
     ## -0.06152378
 
-- **H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die
+**H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die
 Datenschutzbedenken. (Pearson-Korrelation: Zwischen Vertrauen in die
 Technologie UV und Datenschutzbedenken AV)
 
@@ -131,7 +131,7 @@ Technologie UV und Datenschutzbedenken AV)
 
 **Komplexe Zusammenhangshypothesen:**
 
-- **H4:** Je höher die usability und die wahrgenommene Privatsphäredisposition
+**H4:** Je höher die usability und die wahrgenommene Privatsphäredisposition
 des Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung.
 (Multiple lineare Regression: Zwischen usability UV1 sowie
 Privatsphäredisposition UV2 und Privatsphären-Wahrnehmung AV)
