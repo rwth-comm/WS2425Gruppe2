@@ -13,9 +13,8 @@ raw <-filter(raw,Status == 0)
 
 
 # Überflüssige Rohdaten entfernen ----
-raw.short2 <- raw2[,c(6,9,19:62,64,98:110)]
 
-raw.short <- raw[,c(6,9,19:64,94:104)]
+raw.short <- raw[c(16:244),c(6,9,19:64,94:104)]
 
 dput(names(raw.short))
 
@@ -128,3 +127,13 @@ t.test(df_male$privacy_concerns, df_female$privacy_concerns)
 cohensD(df_male$privacy_concerns, df_female$privacy_concerns)
 
 pwr::pwr.t.test(n = 110, sig.level = 0.05, d = NULL , power = 0.5)
+
+# Qualitätskontrolle ----
+
+raw.short.quality <- careless_indices(raw.short, likert_vector = c(7:39), duration_column = "Duration", speeder_analysis = "median/2")
+
+raw.short.quality %>% 
+  filter(speeder_flag == FALSE) %>% 
+  filter(careless_longstr < 20) %>% 
+  filter(careless_psychsyn > 0) %>% 
+  filter(careless_mahadflag == FALSE) -> raw.short.quality
