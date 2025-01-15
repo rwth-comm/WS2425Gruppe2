@@ -23,17 +23,17 @@ df <- readRDS("data/data.rds")
 * Zehra
 * Elcin-Havva Konar
 
-## Forschungsfrage
+##Forschungsfrage
 
 * Welche Faktoren beeinflussen die Akzeptanz und die Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
-## [Faktorenraum]{.underline} ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
+##Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
-## [Operationalisierung]{.underline}
+##Operationalisierung
 
 * **Technikaffinität:** Affinity towards technology interaction (ATI) nach [Franke et al. (2019)](10.1080/10447318.2018.1456150 "Franke, T., Attig, C., & Wessel, D. (2019). A Personal Resource for Technology Interaction: Development and Validation of the Affinity for Technology Interaction (ATI) Scale. International Journal of Human–Computer Interaction, 35(6), 456-467, DOI: 10.1080/10447318.2018.1456150")
 
--   A**lter**: Wie alt sind Sie?
+-   **Alter**: Wie alt sind Sie?
     (in Jahren)
 
 -   **Bildungsabschluss**: Was ist ihr höchster Bildungsabschluss?
@@ -47,15 +47,15 @@ df <- readRDS("data/data.rds")
 
 -   **Vertrauen**: Trust_in_Automation_Questionnaire (TiA): <https://github.com/moritzkoerber/TiA_Trust_in_Automation_Questionnaire/blob/master/Vertrauen-in-Automation_TiA_Fragebogen.pdf>
 
--   Nutzung Digitaler Medien: (Häufigkeit der Nutzung) Wie oft nutzen Sie digitale Medien?
+-   *Nutzung Digitaler Medien:** (Häufigkeit der Nutzung) Wie oft nutzen Sie digitale Medien?
     (nie, einmal im Monat, mehrmals im Monat, einmal pro Woche, mehrmals in der Woche, täglich)
 
--   Datenschutzbedenken: Development of measures of online privacy concern and protection for use on the Internet (IUIPC); (Buchanan, Tom & Joinson, Adam & Paine Schofield, Carina & Reips, Ulf-Dietrich. (2007).
+-   **Datenschutzbedenken:** Development of measures of online privacy concern and protection for use on the Internet (IUIPC); (Buchanan, Tom & Joinson, Adam & Paine Schofield, Carina & Reips, Ulf-Dietrich. (2007).
     Development of measures of online privacy concern and protection for use on the Internet.
     Journal of the American Society for Information Science and Technology.
     <http://dx.doi.org/10.1002/asi.20459>)
 
-## [Hypothesen]{.underline}
+##Hypothesen
 
 *Einfache Zusammenhangshypothesen:*
 

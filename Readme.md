@@ -44,33 +44,33 @@ alt="Faktorenraum" />
 [Franke et
 al. (2019)](10.1080/10447318.2018.1456150 "Franke, T., Attig, C., & Wessel, D. (2019). A Personal Resource for Technology Interaction: Development and Validation of the Affinity for Technology Interaction (ATI) Scale. International Journal of Human–Computer Interaction, 35(6), 456-467, DOI: 10.1080/10447318.2018.1456150")
 
-- Alter: Wie alt sind Sie? (in Jahren)
+- **Alter:** Wie alt sind Sie? (in Jahren)
 
-Bildungsabschluss: Was ist ihr höchster Bildungsabschluss? ((Noch) kein
+- **Bildungsabschluss:** Was ist ihr höchster Bildungsabschluss? ((Noch) kein
 Schulabschluss Hauptschulabschluss Realschulabschluss Abitur Höher als
 Abitur)
 
-Nutzungsintention: User Acceptance of Information Technology: Toward a
+- **Nutzungsintention:** User Acceptance of Information Technology: Toward a
 Unified View (UTAUT) Venkatesh, V., Morris, M. G., Davis, G. B., &
 Davis, F. D. (2003). User Acceptance of Information Technology: Toward a
 Unified View. MIS Quarterly, 27(3), 425–478.
 <https://doi.org/10.2307/30036540>
 
-Vertrauen: Trust\_in\_Automation\_Questionnaire (TiA):
+- **Vertrauen:** Trust\_in\_Automation\_Questionnaire (TiA):
 <https://github.com/moritzkoerber/TiA_Trust_in_Automation_Questionnaire/blob/master/Vertrauen-in-Automation_TiA_Fragebogen.pdf>
 
-Nutzung Digitaler Medien: (Häufigkeit der Nutzung) Wie oft nutzen Sie
+- **Nutzung Digitaler Medien:** (Häufigkeit der Nutzung) Wie oft nutzen Sie
 digitale Medien? (nie, einmal im Monat, mehrmals im Monat, einmal pro
 Woche, mehrmals in der Woche, täglich)
 
-Datenschutzbedenken: Development of measures of online privacy concern
+- **Datenschutzbedenken:** Development of measures of online privacy concern
 and protection for use on the Internet (IUIPC); (Buchanan, Tom &
 Joinson, Adam & Paine Schofield, Carina & Reips, Ulf-Dietrich. (2007).
 Development of measures of online privacy concern and protection for use
 on the Internet. Journal of the American Society for Information Science
 and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 
-# Hypothesen
+##Hypothesen
 
 Einfache Zusammenhangshypothesen:
 
