@@ -19,9 +19,9 @@ df <- readRDS("data/data.rds")
 # **Teammitglieder**
 
 * Emilia
-*   Monique
-*   Zehra
-*   Elcin-Havva Konar
+* Monique
+* Zehra
+* Elcin-Havva Konar
 
 ## Forschungsfrage
 
