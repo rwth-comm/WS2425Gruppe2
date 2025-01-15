@@ -33,12 +33,6 @@ Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
 Readme\_files/Faktorenraum.jpeg
 
-# Faktorenraum
-
-<figure>
-<img src="images/Faktorenraum.jpeg" alt="Faktorenraum" />
-<figcaption aria-hidden="true">Faktorenraum</figcaption>
-</figure>
 
 # Operationalisierung
 
