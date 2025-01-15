@@ -16,7 +16,7 @@ library(AachenColorPalette)
 df <- readRDS("data/data.rds")
 ```
 
-# [Teammitglieder]{.underline}
+# [**Teammitglieder**]
 
 -   Emilia
 -   Monique
