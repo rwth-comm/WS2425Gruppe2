@@ -1,19 +1,19 @@
 # Akzeptanz und Privatsphäre von KI-Chatbots in der Verwaltung
 
-# Teammitglieder
+## Teammitglieder
 
 -   Emilia
 -   Monique
 -   Zehra
 -   Elcin-Havva Konar
 
-# Forschungsfrage
+## Forschungsfrage
 
 - Welche Faktoren beeinflussen die Akzeptanz und die
 Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
 Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
-# Faktorenraum
+## Faktorenraum
 
 <figure>
 <img src="Readme_files/Faktorenraum.jpeg"
@@ -22,7 +22,7 @@ alt="Faktorenraum" />
 </figure>
 
 
-# Operationalisierung
+## Operationalisierung
 
 - **Technikaffinität:** Affinity towards technology interaction (ATI) nach
 [Franke et
@@ -54,7 +54,7 @@ Development of measures of online privacy concern and protection for use
 on the Internet. Journal of the American Society for Information Science
 and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 
-# **Hypothesen**
+## **Hypothesen**
 
 **Einfache Zusammenhangshypothesen:**
 
