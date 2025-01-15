@@ -74,7 +74,7 @@ and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 
 **Einfache Zusammenhangshypothesen:**
 
-**H1:** Es gibt einen positiven Zusammenhang zwischen der Technikaffinität
+* **H1:** Es gibt einen positiven Zusammenhang zwischen der Technikaffinität
 und digitaler Mediennutzung (Spearman-Korrelation: Zwischen
 Technikaffinität UV und Digitale Mediennutzung AV)
 
@@ -136,9 +136,9 @@ des Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung.
 (Multiple lineare Regression: Zwischen usability UV1 sowie
 Privatsphäredisposition UV2 und Privatsphären-Wahrnehmung AV)
 
-Einfache Unterschiedshypothesen:
+**Einfache Unterschiedshypothesen:**
 
-H5: Nutzende mit höherem Bildungsabschluss haben eine höhere
+**H5:** Nutzende mit höherem Bildungsabschluss haben eine höhere
 Technikaffinität als Nutzende mit niedrigem Bildungsabschluss.
 (Unverbundener T-Test: Zwischen Bildungsniveau UV und Technikaffinität
 AV)
@@ -157,7 +157,7 @@ AV)
     ## mean of x mean of y 
     ##  3.528192  3.570671
 
-H6: Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung
+**H6:** Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung
 eines KI-Chatbots als Männer. (Unverbundener T-Test: Zwischen Geschlecht
 (UV) und wahrgenommener Privatsphäre (AV)
 
@@ -175,7 +175,7 @@ eines KI-Chatbots als Männer. (Unverbundener T-Test: Zwischen Geschlecht
     ## mean of x mean of y 
     ##  3.487654  3.418947
 
-H7: Die Nutzungsintention der Stichprobe, gemessen auf einer Skala von
+**H7:** Die Nutzungsintention der Stichprobe, gemessen auf einer Skala von
 1-6, ist höher als 3. (Einfacher T-Test: Nutzungsintention (AV))
 
     t.test(df$BIATT,mu=3)
@@ -192,9 +192,9 @@ H7: Die Nutzungsintention der Stichprobe, gemessen auf einer Skala von
     ## mean of x 
     ##  3.529762
 
-Komplexe Unterschiedshypothesen:
+**Komplexe Unterschiedshypothesen:**
 
-H8: Jüngere und technikaffine Nutzende haben eine höhere
+**H8:** Jüngere und technikaffine Nutzende haben eine höhere
 Nutzungsintention und eine positivere Privatsphären-Wahrnehmung des
 Chatbots als ältere und technikavers Nutzende. (F-Test MANOVA: Zwischen
 Alter UV1 & Technikaffinität UV2 und Nutzungsintention AV1 &

@@ -59,7 +59,7 @@ Development of measures of online privacy concern and protection for use on the 
 
 **Einfache Zusammenhangshypothesen:**
 
-- **H1:** Es gibt einen positiven Zusammenhang zwischen der 
+* **H1:** Es gibt einen positiven Zusammenhang zwischen der 
 Technikaffinität und digitaler Mediennutzung (Kendall-Tau: Zwischen 
 Technikaffinität UV und Digitale Mediennutzung AV)
 
@@ -67,7 +67,9 @@ Technikaffinität UV und Digitale Mediennutzung AV)
 cor.test(df$ATI,as.numeric(df$Mn), method = "kendall-tau")
 ```
 
-- **H2:** Je höher das Alter der Nutzenden, desto höher die Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und Privatsphäredisposition AV)
+- **H2:** Je höher das Alter der Nutzenden, desto höher die 
+Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und 
+Privatsphäredisposition AV)
 
 ```{r}
 cor.test(df$Age,df$PD, method = "pearson")
