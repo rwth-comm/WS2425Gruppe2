@@ -29,6 +29,8 @@ Welche Faktoren beeinflussen die Akzeptanz und die Privatsphären-Wahrnehmung be
 
 #Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
+
+
 ## Operationalisierung
 
 Technikaffinität: Affinity towards technology interaction (ATI) nach [Franke et al. (2019)](10.1080/10447318.2018.1456150 "Franke, T., Attig, C., & Wessel, D. (2019). A Personal Resource for Technology Interaction: Development and Validation of the Affinity for Technology Interaction (ATI) Scale. International Journal of Human–Computer Interaction, 35(6), 456-467, DOI: 10.1080/10447318.2018.1456150")
