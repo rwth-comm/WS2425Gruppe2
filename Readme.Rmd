@@ -27,10 +27,7 @@ Welche Faktoren beeinflussen die Akzeptanz und die
 Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
 Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
-# Faktorenraum
-Faktorenraum.jpeg
-
-# Faktorenraum
+#Faktorenraum
 ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
 
