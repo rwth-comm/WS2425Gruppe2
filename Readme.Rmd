@@ -16,16 +16,16 @@ library(AachenColorPalette)
 df <- readRDS("data/data.rds")
 ```
 
-# [**Teammitglieder**]
+# **Teammitglieder**
 
--   Emilia
--   Monique
--   Zehra
--   Elcin-Havva Konar
+* Emilia
+*   Monique
+*   Zehra
+*   Elcin-Havva Konar
 
-## [Forschungsfrage]{.underline}
+## Forschungsfrage
 
--   Welche Faktoren beeinflussen die Akzeptanz und die Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der Kommunalverwaltung zur Unterstützung bei Formularprozessen?
+*Welche Faktoren beeinflussen die Akzeptanz und die Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
 ## [Faktorenraum]{.underline} ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
