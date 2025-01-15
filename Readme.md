@@ -25,7 +25,7 @@
 
 # Forschungsfrage
 
-Welche Faktoren beeinflussen die Akzeptanz und die
+- Welche Faktoren beeinflussen die Akzeptanz und die
 Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
 Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
@@ -40,11 +40,11 @@ alt="Faktorenraum" />
 
 # Operationalisierung
 
-Technikaffinität: Affinity towards technology interaction (ATI) nach
+- Technikaffinität: Affinity towards technology interaction (ATI) nach
 [Franke et
 al. (2019)](10.1080/10447318.2018.1456150 "Franke, T., Attig, C., & Wessel, D. (2019). A Personal Resource for Technology Interaction: Development and Validation of the Affinity for Technology Interaction (ATI) Scale. International Journal of Human–Computer Interaction, 35(6), 456-467, DOI: 10.1080/10447318.2018.1456150")
 
-Alter: Wie alt sind Sie? (in Jahren)
+- Alter: Wie alt sind Sie? (in Jahren)
 
 Bildungsabschluss: Was ist ihr höchster Bildungsabschluss? ((Noch) kein
 Schulabschluss Hauptschulabschluss Realschulabschluss Abitur Höher als
