@@ -19,7 +19,7 @@ df <- readRDS("data/data.rds")
 -   Emilia
 -   Monique
 -   Zehra
--   Elcin 
+-   Elcin-Havva Konar
 
 # Forschungsfrage
 
@@ -31,7 +31,7 @@ Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 Readme_files/Faktorenraum.jpeg
 
 # Faktorenraum
-![Faktorenraum](images/Faktorenraum.jpeg)
+![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
 
 # Operationalisierung
