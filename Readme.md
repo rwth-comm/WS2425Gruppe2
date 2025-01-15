@@ -74,7 +74,7 @@ and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 
 **Einfache Zusammenhangshypothesen:**
 
-* **H1:** Es gibt einen positiven Zusammenhang zwischen der Technikaffinität
+**H1:** Es gibt einen positiven Zusammenhang zwischen der Technikaffinität
 und digitaler Mediennutzung (Spearman-Korrelation: Zwischen
 Technikaffinität UV und Digitale Mediennutzung AV)
 

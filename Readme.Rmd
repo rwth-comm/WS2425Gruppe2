@@ -59,7 +59,7 @@ Development of measures of online privacy concern and protection for use on the 
 
 **Einfache Zusammenhangshypothesen:**
 
-* **H1:** Es gibt einen positiven Zusammenhang zwischen der 
+- **H1:** Es gibt einen positiven Zusammenhang zwischen der 
 Technikaffinität und digitaler Mediennutzung (Kendall-Tau: Zwischen 
 Technikaffinität UV und Digitale Mediennutzung AV)
 
@@ -85,7 +85,7 @@ cor.test(df$NZV,df$PW, method = "pearson")
 
 - **H4:** Je höher die usability und die wahrgenommene Privatsphäredisposition des Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung. (Multiple lineare Regression: Zwischen usability UV1 sowie Privatsphäredisposition UV2 und Privatsphären-Wahrnehmung AV)
 
-*Einfache Unterschiedshypothesen:*
+**Einfache Unterschiedshypothesen:**
 
 - **H5:** Nutzende mit höherem Bildungsabschluss haben eine höhere Technikaffinität als Nutzende mit niedrigem Bildungsabschluss. (Unverbundener T-Test: Zwischen Bildungsniveau UV und Technikaffinität AV)
 
@@ -105,7 +105,7 @@ t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$
 t.test(df$BIATT,mu=3)
 ```
 
-*Komplexe Unterschiedshypothesen:*
+**Komplexe Unterschiedshypothesen:**
 
 - **H8:** Jüngere und technikaffine Nutzende haben eine höhere Nutzungsintention und eine positivere Privatsphären-Wahrnehmung des Chatbots als ältere und technikavers Nutzende. (F-Test MANOVA: Zwischen Alter UV1 & Technikaffinität UV2 und Nutzungsintention AV1 & wahrgenommene Privatsphäre und Datensicherheit AV2)
 
