@@ -55,7 +55,7 @@ df <- readRDS("data/data.rds")
 Development of measures of online privacy concern and protection for use on the Internet.Journal of the American Society for Information Science and Technology.
     <http://dx.doi.org/10.1002/asi.20459>)
 
-#*Hypothesen*
+#**Hypothesen**
 
 **Einfache Zusammenhangshypothesen:**
 
@@ -77,7 +77,7 @@ cor.test(df$Age,df$PD, method = "pearson")
 cor.test(df$NZV,df$PW, method = "pearson")
 ```
 
-*Komplexe Zusammenhangshypothesen:*
+**Komplexe Zusammenhangshypothesen:**
 
 - **H4:** Je höher die usability und die wahrgenommene Privatsphäredisposition des Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung. (Multiple lineare Regression: Zwischen usability UV1 sowie Privatsphäredisposition UV2 und Privatsphären-Wahrnehmung AV)
 
