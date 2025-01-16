@@ -40,6 +40,18 @@ ggsave(filename = "Hypothese 1.png", width = 10)
 library(ggplot2)
 library(dplyr)
 
+ggplot(df) +
+ aes(x = Age, y = PD) +
+ geom_point(colour = "#112446") +
+ labs(x = "Alter in Jahren", y = "Privatsphärenakzeptanz", 
+ title = "Zusammenhang von Alter und Privatspährendisposition", subtitle = "Punktdiagramm") +
+ theme_minimal()
+ggsave(filename = "Hypothese2.png", width = 10)
+
+
+library(ggplot2)
+library(dplyr)
+
 df_clean <- df %>% 
   filter(!is.na(Bildungsabschluss) & !is.na(ATI)) %>%
   mutate(Bildungsgruppe = case_when( 

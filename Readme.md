@@ -59,7 +59,8 @@
 -   **H1:** Es gibt einen positiven Zusammenhang zwischen der
     Technikaffinität und digitaler Mediennutzung (Kendall-Tau: Zwischen
     Technikaffinität UV und Digitale Mediennutzung AV)
-![](Readme_files/Hypothese1.png)
+    
+![](Readme_files/Hypothese 1.png)
 
 
 <!-- -->
@@ -82,7 +83,7 @@
     Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und
     Privatsphäredisposition AV)
   
-
+![](Readme_files/Hypothese 2.png)
 <!-- -->
 
     cor.test(df$Age,df$PD, method = "pearson")
