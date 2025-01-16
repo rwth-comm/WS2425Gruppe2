@@ -57,10 +57,7 @@ and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 
 ## **Stichprobenbeschreibung**
 
-<figure>
-<img src="Readme_files/histogramAlter.png"
-alt="Histogram" />
-
+![Stichprobenbeschreibung](Readme_files/histogramAlter.png)
 
 ## **Hypothesen**
 
