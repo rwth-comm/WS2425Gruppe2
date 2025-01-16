@@ -55,9 +55,11 @@ on the Internet. Journal of the American Society for Information Science
 and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 
 
-## **Stichprobenbeschreibung**
+## Altersverteilung der Stichprobe im Histogramm
 
-![Altersverteilung](Readme_files/histogramAlter.png)
+<figure>
+<img src="Readme_files/HistogramAlter.png"
+alt="Histogram" />
 
 ## **Hypothesen**
 
