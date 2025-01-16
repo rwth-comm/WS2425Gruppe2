@@ -69,7 +69,7 @@ ggplot(df) +
        subtitle = "Histogramm der Altersverteilung", caption = " 30 Bins ") +
   theme_minimal()
   
-## **Altersverteilung**
+## **Stichprobenbeschreibung**
 ![Altersverteilung](Readme_files/histogramAlter.png)
 
 ## **Hypothesen**

@@ -55,13 +55,12 @@ on the Internet. Journal of the American Society for Information Science
 and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 
 
-## **Altersverteilung**
+## **Stichprobenbeschreibung**
 
 <figure>
 <img src="Readme_files/histogramAlter.png"
 alt="Histogram" />
-<figcaption aria-hidden="true">Histogram</figcaption>
-</figure>
+
 
 ## **Hypothesen**
 

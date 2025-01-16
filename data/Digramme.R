@@ -21,5 +21,5 @@ ggplot(df) +
   labs(x = "Alter in Jahren", y = " Anzahl ", title = paste0("Altersverteiliung n = (", nrow(df),")"), 
        subtitle = "Histogramm der Altersverteilung", caption = " 30 Bins ") +
   theme_minimal()
-ggsave(filename = "histogramAlter.png", width = 15, height = 12, units = "cm")
+ggsave(filename = "histogramAlter.png", width = 10, height = 8, units = "cm")
 
