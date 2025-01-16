@@ -57,7 +57,7 @@ and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 
 ## **Stichprobenbeschreibung**
 
-![Stichprobenbeschreibung](Readme_files/histogramAlter.png)
+![Altersverteilung](Readme_files/histogramAlter.png)
 
 ## **Hypothesen**
 
