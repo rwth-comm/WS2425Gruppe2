@@ -28,13 +28,17 @@ ggsave(filename = "histogramAlter.png", width = 10, height = 8, units = "cm")
 
 library(ggplot2)
 
+
+library(ggplot2)
+
 ggplot(df) +
-  aes(x = ATI, y = Mn) +
-  geom_boxplot(fill = "#112446") +
-  labs(x = "Technikaffinität UV ", y = " Digitale Medienutzung (AV)", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung n = (", nrow(df),") ", 
-       subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung ") +
-  theme_minimal()
-ggsave(filename = "BoxplotATI&MN.png", width = 15, height = 10, units = "cm")
+ aes(x = ATI, y = Mn) +
+ geom_boxplot(fill = "#4682B4") +
+ labs(x = " Technikaffinität ", y = " Digitale Mediennutzung ", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung  n = (", nrow(df),")", 
+ subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung ") +
+ theme_minimal()
+ggsave(filename = "Hypothese1.png", width = 10, height = 8, units = "cm")
+
 
 library(ggplot2)
 
