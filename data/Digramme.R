@@ -7,6 +7,7 @@ library(tidyverse)
 library(ggthemes)
 library(AachenColorPalette)
 
+rwthcolor <- hcictools::rwth.colorpalette()
 df <- readRDS("data/data.rds")
 
 
@@ -20,7 +21,27 @@ ggplot(df) +
  labs(x = "Alter in Jahren", y = "Anzahl der Proband*innen", title = paste0("Altersverteiliung n = (", nrow(df),")"), 
  subtitle = " Histogram der Altersverteilung", caption = " 30 Bins ") +
  theme_minimal()
-ggsave(filename = "histogramAlter.png", width = 15, height = 10, units = "cm")
+ggsave(filename = "histogramAlter.png", width = 10, height = 8, units = "cm")
 
+library(ggplot2)
+library(dplyr)
 
+df_clean <- df %>% 
+  filter(!is.na(Bildungsabschluss) & !is.na(ATI)) %>%
+  mutate(Bildungsgruppe = case_when( 
+    Bildungsabschluss > "Abitur" ~ "Höher als Abitur", 
+    Bildungsabschluss < "Abitur" ~ "Niedriger als Abitur"
+  ))
 
+df_summary <- df_clean %>%
+  group_by(Bildungsgruppe) %>%
+  summarise(
+    mean_ATI = mean(ATI, na.rm = TRUE),
+    sd_ATI = sd(ATI, na.rm = TRUE)
+  )
+
+ggplot(df_summary, aes(x = Bildungsgruppe, y = mean_ATI)) +
+  geom_bar(width = 0.5, stat = "identity", fill = rwthcolor$bordeaux) +
+  geom_errorbar(aes(ymin = mean_ATI - sd_ATI, ymax = mean_ATI + sd_ATI), width = 0.2) +
+  labs(title = "Mittelwert des ATI-Werts nach Bildungsgruppe", x = "Bildungsgruppe", y = "Mittlerer ATI-Wert") +
+  theme_minimal()
