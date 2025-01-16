@@ -58,7 +58,7 @@ and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 ## Altersverteilung der Stichprobe im Histogram
 
 <figure>
-<img src="Readme_files/histogramAlter.png"
+<img src="Readme_files/histogramAlter.png
 alt="Histogram" />
 
 ## **Hypothesen**
