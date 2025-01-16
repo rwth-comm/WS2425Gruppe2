@@ -25,17 +25,17 @@ ggplot(df) +
  theme_minimal()
 ggsave(filename = "histogramAlter.png", width = 10, height = 8, units = "cm")
 
-library(dplyr)
+
 library(ggplot2)
+library(dplyr)
 
 ggplot(df) +
- aes(x = ATI, y = Mn) +
+ aes(x = Age, y = Mn) +
  geom_boxplot(fill = "#112446") +
- labs(x = "Alter", y = "Digitale Mediennutzung", 
- title = "Zusammenhang zwischen Alter und Privatsphärendisposition") +
+ labs(x = "Alter in Jahren", y = "Digitale Mediennutzung", 
+ title = "Zusammenhang von Alter und Nutzung digitaler Medien") +
  theme_minimal()
-ggsave(filename = "Hypothese 1.png", width = 10)
-
+ggsave(filename = "Hypothese1.png", width = 10)
 
 library(ggplot2)
 library(dplyr)
