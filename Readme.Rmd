@@ -59,8 +59,7 @@ libary(ggplot2)
     
 ## Altersverteilung der Stichprobe im Histogram
 
-![Altersverteilung](Readme_files/histogramAlter.png)
-
+![](Readme_files/histogramAlter.png)
 
 ## **Hypothesen**
 
