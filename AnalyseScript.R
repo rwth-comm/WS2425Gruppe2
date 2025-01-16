@@ -101,7 +101,5 @@ write_rds(data, "data/data.rds")
 raw.short.quality <- careless_indices(raw.short, likert_vector = c(7:39), duration_column = "Duration", speeder_analysis = "median/2")
 
 raw.short.quality %>% 
-  filter(speeder_flag == FALSE) %>% 
-  filter(careless_longstr < 20) %>% 
-  filter(careless_psychsyn > 0) %>% 
-  filter(careless_mahadflag == FALSE) -> raw.short.quality
+  filter(speeder_flag == FALSE) -> raw.short.quality
+

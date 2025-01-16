@@ -24,7 +24,7 @@ libary(ggplot2)
 ## **Teammitglieder**
 
 -   Emilia
--   Monique
+-   Monique Beckers
 -   Zehra
 -   Elcin-Havva Konar
 
