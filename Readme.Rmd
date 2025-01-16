@@ -68,6 +68,7 @@ ggplot(df) +
   labs(x = "Alter in Jahren", y = " Anzahl ", title = paste0("Altersverteiliung n = (", nrow(df),")"), 
        subtitle = "Histogramm der Altersverteilung", caption = " 30 Bins ") +
   theme_minimal()
+  
 ## **Altersverteilung**
 ![Altersverteilung](Readme_files/histogramAlter.png)
 
