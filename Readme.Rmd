@@ -71,6 +71,7 @@ ggplot(df) +
 
 
 ## **Hypothesen**
+![](Readme_files/histogramAlter.png)
 
 **Einfache Zusammenhangshypothesen:**
 
