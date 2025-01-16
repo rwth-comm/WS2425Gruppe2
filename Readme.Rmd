@@ -87,8 +87,8 @@ cor.test(df$ATI,as.numeric(df$Mn), method = "kendall-tau")
 ```{r}
 ggplot(df) +
  aes(x = ATI, y = Mn) +
- geom_boxplot(fill = "#112446") +
- labs(x = "Technikaffinität UV ", y = " Digitale Medienutzung (AV)", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung n = (", nrow(df),") ", 
+ geom_boxplot(fill = "#4682B4") +
+ labs(x = " Technikaffinität ", y = " Digitale Mediennutzung ", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung  n = (", nrow(df),")", 
  subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung ") +
  theme_minimal()
 ```

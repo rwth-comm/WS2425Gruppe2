@@ -82,7 +82,7 @@ Technikaffinität UV und Digitale Mediennutzung AV)
     ##        rho 
     ## 0.02043267
 
-![](Readme_files/BoxplotATI&MN.png)
+![](Readme_files/Hypothese1.png.png)
 
 **H2:** Je höher das Alter der Nutzenden, desto höher die
 Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und
@@ -102,7 +102,7 @@ Privatsphäredisposition AV)
     ##         cor 
     ## -0.06152378
     
-![](Readme_files/PunktdiagrammAlter&Privatsphäre.png)
+
 
 **H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die
 Datenschutzbedenken. (Pearson-Korrelation: Zwischen Vertrauen in die
