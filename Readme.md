@@ -82,7 +82,7 @@ Technikaffinität UV und Digitale Mediennutzung AV)
     ##        rho 
     ## 0.02043267
 
-![](Readme_files/Hypothese1.png.png)
+![](Readme_files/Hypothese1.png)
 
 **H2:** Je höher das Alter der Nutzenden, desto höher die
 Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und
