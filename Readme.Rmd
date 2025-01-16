@@ -79,7 +79,7 @@ cor.test(df$Age,df$PD, method = "pearson")
 
 -   **H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die Datenschutzbedenken. (Pearson-Korrelation: Zwischen Vertrauen in die Technologie UV und Datenschutzbedenken AV)
 
-(Readme_files/Hypothese 3 .png)
+![] (Readme_files/Hypothese 3 .png)
 
 ```{r}
 cor.test(df$NZV,df$PW, method = "pearson")
