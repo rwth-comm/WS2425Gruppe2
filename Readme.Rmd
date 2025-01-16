@@ -4,27 +4,27 @@ author: "Gruppe 2"
 output: md_document
 date: "2024-10-21"
 editor_options: 
-  markdown: 
-    wrap: sentence
+wrap: sentence
 ---
 
 ```{r include=FALSE}
 library(tidyverse)
 library(ggthemes)
 library(AachenColorPalette)
-libary(jmv)
+library(jmv)
+library(ggplot2)
 
 df <- readRDS("data/data.rds")
-display_aachen_colors(
-libary(ggplot2)
-)
+display_aachen_colors()
+
 ```
 
 # Akzeptanz und Privatsphäre von KI-Chatbots in der Verwaltung
+
 ## **Teammitglieder**
 
 -   Emilia Momot
--   Monique
+-   Monique Beckers
 -   Zehra
 -   Elcin-Havva Konar
 
@@ -68,7 +68,7 @@ libary(ggplot2)
 -   **H1:** Es gibt einen positiven Zusammenhang zwischen der Technikaffinität und digitaler Mediennutzung (Kendall-Tau: Zwischen Technikaffinität UV und Digitale Mediennutzung AV)
 
 ```{r}
-cor.test(df$ATI,as.numeric(df$Mn), method = "kendall-tau")
+cor.test(df$ATI,as.numeric(df$Mn), method = "kendall")
 ```
 
 -   **H2:** Je höher das Alter der Nutzenden, desto höher die Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und Privatsphäredisposition AV)
@@ -93,11 +93,15 @@ cor.test(df$NZV,df$PW, method = "pearson")
 
 -   **H5:** Nutzende mit höherem Bildungsabschluss haben eine höhere Technikaffinität als Nutzende mit niedrigem Bildungsabschluss. (Unverbundener T-Test: Zwischen Bildungsniveau UV und Technikaffinität AV)
 
+(Readme_files/Hypothese5.png)
+
 ```{r}
 t.test( filter(df, Bildungsabschluss > "Abitur")$ATI , filter(df, Bildungsabschluss < "Abitur")$ATI )
 ```
 
 -   **H6:** Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung eines KI-Chatbots als Männer. (Unverbundener T-Test: Zwischen Geschlecht (UV) und wahrgenommener Privatsphäre (AV)
+
+(Readme_files/Hypothese6.png)
 
 ```{r}
 t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$PW )
