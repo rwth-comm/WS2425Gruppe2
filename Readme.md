@@ -60,7 +60,7 @@
     Technikaffinität und digitaler Mediennutzung (Kendall-Tau: Zwischen
     Technikaffinität UV und Digitale Mediennutzung AV)
     
-![](Readme_files/Hypothese 1.png)
+![](Readme_files/Hypothese1.png)
 
 
 <!-- -->
@@ -83,7 +83,7 @@
     Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und
     Privatsphäredisposition AV)
   
-![](Readme_files/Hypothese 2.png)
+![](Readme_files/Hypothese2.png)
 <!-- -->
 
     cor.test(df$Age,df$PD, method = "pearson")
