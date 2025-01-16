@@ -67,9 +67,9 @@ and Technology. <http://dx.doi.org/10.1002/asi.20459>)
 und digitaler Mediennutzung (Spearman-Korrelation: Zwischen
 Technikaffinität UV und Digitale Mediennutzung AV)
 
-    cor.test(df$ATI,as.numeric(df$Mn), method = "spearman")
+    cor.test(df$ATI,as.numeric(df$Mn), method = "kendall-tau")
 
-    ## Warning in cor.test.default(df$ATI, as.numeric(df$Mn), method = "spearman"):
+    ## Warning in cor.test.default(df$ATI, as.numeric(df$Mn), method = "kendall-tau"):
     ## Cannot compute exact p-value with ties
 
     ## 
@@ -81,6 +81,8 @@ Technikaffinität UV und Digitale Mediennutzung AV)
     ## sample estimates:
     ##        rho 
     ## 0.02043267
+
+![](Readme_files/BoxplotATI&MN.png)
 
 **H2:** Je höher das Alter der Nutzenden, desto höher die
 Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und

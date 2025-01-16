@@ -10,7 +10,9 @@ library(AachenColorPalette)
 df <- readRDS("data/data.rds")
 
 
+
 library(ggplot2)
+
 
 ggplot(df) +
  aes(x = Age) +
@@ -21,6 +23,18 @@ ggplot(df) +
  subtitle = " Histogram der Altersverteilung", caption = " 30 Bins ") +
  theme_minimal()
 ggsave(filename = "histogramAlter.png", width = 15, height = 10, units = "cm")
+
+
+
+library(ggplot2)
+
+ggplot(df) +
+ aes(x = ATI, y = Mn) +
+ geom_boxplot(fill = "#112446") +
+ labs(x = "Technikaffinität UV ", y = " Digitale Medienutzung (AV)", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung n = (", nrow(df),") ", 
+ subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung ") +
+ theme_minimal()
+ggsave(filename = "BoxplotATI&MN.png", width = 15, height = 10, units = "cm")
 
 
 
