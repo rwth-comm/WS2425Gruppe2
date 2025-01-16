@@ -98,7 +98,7 @@
     sind die Datenschutzbedenken. (Pearson-Korrelation: Zwischen
     Vertrauen in die Technologie UV und Datenschutzbedenken AV)
 
-(Readme\_files/Hypothese 3 .png)
+![](Readme_files/Hypothese%203%20.png)
 
     cor.test(df$NZV,df$PW, method = "pearson")
 
@@ -129,7 +129,7 @@
     (Unverbundener T-Test: Zwischen Bildungsniveau UV und
     Technikaffinität AV)
 
-(Readme\_files/Hypothese5.png)
+![](Readme_files/Hypothese5.png)
 
     t.test( filter(df, Bildungsabschluss > "Abitur")$ATI , filter(df, Bildungsabschluss < "Abitur")$ATI )
 
@@ -149,7 +149,7 @@
     Nutzung eines KI-Chatbots als Männer. (Unverbundener T-Test:
     Zwischen Geschlecht (UV) und wahrgenommener Privatsphäre (AV)
 
-(Readme\_files/Hypothese6.png)
+![](Readme_files/Hypothese6.png)
 
     t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$PW )
 

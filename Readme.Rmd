@@ -79,7 +79,7 @@ cor.test(df$Age,df$PD, method = "pearson")
 
 -   **H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die Datenschutzbedenken. (Pearson-Korrelation: Zwischen Vertrauen in die Technologie UV und Datenschutzbedenken AV)
 
-(Readme_files/Hypothese 3 .png)
+![](Readme_files/Hypothese 3 .png)
 
 ```{r}
 cor.test(df$NZV,df$PW, method = "pearson")
@@ -93,7 +93,7 @@ cor.test(df$NZV,df$PW, method = "pearson")
 
 -   **H5:** Nutzende mit höherem Bildungsabschluss haben eine höhere Technikaffinität als Nutzende mit niedrigem Bildungsabschluss. (Unverbundener T-Test: Zwischen Bildungsniveau UV und Technikaffinität AV)
 
-(Readme_files/Hypothese5.png)
+![](Readme_files/Hypothese5.png)
 
 ```{r}
 t.test( filter(df, Bildungsabschluss > "Abitur")$ATI , filter(df, Bildungsabschluss < "Abitur")$ATI )
@@ -101,7 +101,7 @@ t.test( filter(df, Bildungsabschluss > "Abitur")$ATI , filter(df, Bildungsabschl
 
 -   **H6:** Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung eines KI-Chatbots als Männer. (Unverbundener T-Test: Zwischen Geschlecht (UV) und wahrgenommener Privatsphäre (AV)
 
-(Readme_files/Hypothese6.png)
+![](Readme_files/Hypothese6.png)
 
 ```{r}
 t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$PW )
