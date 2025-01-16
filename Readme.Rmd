@@ -88,11 +88,12 @@ cor.test(df$ATI,as.numeric(df$Mn), method = "kendall-tau")
 ```{r, echo = F}
 ggplot(df) +
  aes(x = ATI, y = Mn) +
- geom_boxplot(fill = "#4682B4") +
- labs(x = "Technikaffinität", y = "Digitale Mediennutzung", title = "Zusammenhang zwischen Technikaffinität und digialer Mediennutzung  n = (", nrow(df),")", 
- subtitle = "Bloxplot Technikaffinität und digialer Mediennutzung") +
+ geom_boxplot(fill = "#112446") +
+ labs(x = "Alter", y = "Digitale Mediennutzung", 
+ title = "Zusammenhang zwischen Alter und Privatsphärendisposition") +
  theme_minimal()
 ```
+
 
 
 -   **H2:** Je höher das Alter der Nutzenden, desto höher die Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und Privatsphäredisposition AV)

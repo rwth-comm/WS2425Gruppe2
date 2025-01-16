@@ -25,29 +25,16 @@ ggplot(df) +
  theme_minimal()
 ggsave(filename = "histogramAlter.png", width = 10, height = 8, units = "cm")
 
-
 library(dplyr)
 library(ggplot2)
 
 ggplot(df) +
  aes(x = ATI, y = Mn) +
- geom_boxplot(fill = "#4682B4") +
- labs(x = "Technikaffinität ", y = "Digitale Mediennutzung ", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung  n = (", nrow(df),")", 
- subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung") +
+ geom_boxplot(fill = "#112446") +
+ labs(x = "Alter", y = "Digitale Mediennutzung", 
+ title = "Zusammenhang zwischen Alter und Privatsphärendisposition") +
  theme_minimal()
-ggsave(filename = "Hypothese1.png", width = 10, height = 8, units = "cm")
-
-library(dplyr)
-library(ggplot2)
-
-ggplot(df) +
-  aes(x = Age, y = PD) +
-  geom_point(colour = "#112446") +
-  geom_point(colour = "#112446") +
-  labs(x = " Alter in Jahren ", y = "Privatsphärendisposition", title = " Zusammenhang zwischen Alter und Privatsphärendisposition n = (", nrow(df),") ", 
-       subtitle = " Punktdiagramm Alter und  Privatsphärendisposition ") +
-  theme_minimal()
-ggsave(filename = "PunktdiagrammAlter&Privatsphäre.png", width = 10, height = 8, units = "cm")
+ggsave(filename = "Hypothese 1.png", width = 10)
 
 
 library(ggplot2)
