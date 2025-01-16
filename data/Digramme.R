@@ -12,7 +12,7 @@ rwthcolor <- hcictools::rwth.colorpalette()
 df <- readRDS("data/data.rds")
 
 
-
+library(dplyr)
 library(ggplot2)
 
 ggplot(df) +
@@ -26,25 +26,25 @@ ggplot(df) +
 ggsave(filename = "histogramAlter.png", width = 10, height = 8, units = "cm")
 
 
-
+library(dplyr)
 library(ggplot2)
 
 ggplot(df) +
  aes(x = ATI, y = Mn) +
  geom_boxplot(fill = "#4682B4") +
- labs(x = " Technikaffinität ", y = " Digitale Mediennutzung ", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung  n = (", nrow(df),")", 
- subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung ") +
+ labs(x = "Technikaffinität ", y = "Digitale Mediennutzung ", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung  n = (", nrow(df),")", 
+ subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung") +
  theme_minimal()
 ggsave(filename = "Hypothese1.png", width = 10, height = 8, units = "cm")
 
-
+library(dplyr)
 library(ggplot2)
 
 ggplot(df) +
   aes(x = Age, y = PD) +
   geom_point(colour = "#112446") +
   geom_point(colour = "#112446") +
-  labs(x = " Alter in Jahren ", y = " Privatsphärendisposition ", title = " Zusammenhang zwischen Alter und Privatsphärendisposition n = (", nrow(df),") ", 
+  labs(x = " Alter in Jahren ", y = "Privatsphärendisposition", title = " Zusammenhang zwischen Alter und Privatsphärendisposition n = (", nrow(df),") ", 
        subtitle = " Punktdiagramm Alter und  Privatsphärendisposition ") +
   theme_minimal()
 ggsave(filename = "PunktdiagrammAlter&Privatsphäre.png", width = 10, height = 8, units = "cm")

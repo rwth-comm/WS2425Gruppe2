@@ -59,7 +59,8 @@
 -   **H1:** Es gibt einen positiven Zusammenhang zwischen der
     Technikaffinität und digitaler Mediennutzung (Kendall-Tau: Zwischen
     Technikaffinität UV und Digitale Mediennutzung AV)
-    ![](Readme_files/Hypothese1.png)
+  
+  ![](Readme_files/Hypothese1.png)
 
 <!-- -->
 
@@ -78,7 +79,8 @@
 -   **H2:** Je höher das Alter der Nutzenden, desto höher die
     Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und
     Privatsphäredisposition AV)
-    ![](Readme_files/PunktdiagrammAlter&Privatsphäre.png)
+  
+  ![](Readme_files/PunktdiagrammAlter&Privatsphäre.png)
 
 <!-- -->
 
