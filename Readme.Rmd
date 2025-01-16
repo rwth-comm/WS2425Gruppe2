@@ -21,11 +21,10 @@ libary(ggplot2)
 ```
 
 # Akzeptanz und Privatsphäre von KI-Chatbots in der Verwaltung
-
 ## **Teammitglieder**
 
--   Emilia
--   Monique Beckers
+-   Emilia Momot
+-   Monique
 -   Zehra
 -   Elcin-Havva Konar
 
@@ -57,21 +56,10 @@ libary(ggplot2)
 -   **Datenschutzbedenken:** Development of measures of online privacy concern and protection for use on the Internet (IUIPC); (Buchanan, Tom & Joinson, Adam & Paine Schofield, Carina & Reips, Ulf-Dietrich. (2007).
     Development of measures of online privacy concern and protection for use on the Internet.Journal of the American Society for Information Science and Technology.
     <http://dx.doi.org/10.1002/asi.20459>)
-
+    
 ## Altersverteilung der Stichprobe im Histogram
 
-
-```{r, echo = F}
-ggplot(df) +
- aes(x = Age) +
-  geom_histogram(bins = 30L, fill = "#112446") +
-  geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
-  geom_text(x = mean(df$Age, na.rm = TRUE), y = 20, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90, vjust = 1.5 ) +
- labs(x = "Alter in Jahren", y = "Anzahl der Proband*innen", title = paste0("Altersverteiliung n = (", nrow(df),")"), 
- subtitle = " Histogram der Altersverteilung", caption = " 30 Bins ") +
- theme_minimal()
-
-```
+![](Readme_files/histogramAlter.png)
 
 ## **Hypothesen**
 
@@ -83,15 +71,6 @@ ggplot(df) +
 cor.test(df$ATI,as.numeric(df$Mn), method = "kendall-tau")
 ```
 
-```{r}
-ggplot(df) +
- aes(x = ATI, y = Mn) +
- geom_boxplot(fill = "#112446") +
- labs(x = "Technikaffinität UV ", y = " Digitale Medienutzung (AV)", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung n = (", nrow(df),") ", 
- subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung ") +
- theme_minimal()
-```
-
 -   **H2:** Je höher das Alter der Nutzenden, desto höher die Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und Privatsphäredisposition AV)
 
 ```{r}
@@ -99,6 +78,8 @@ cor.test(df$Age,df$PD, method = "pearson")
 ```
 
 -   **H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die Datenschutzbedenken. (Pearson-Korrelation: Zwischen Vertrauen in die Technologie UV und Datenschutzbedenken AV)
+
+(Readme_files/Hypothese 3 .png)
 
 ```{r}
 cor.test(df$NZV,df$PW, method = "pearson")
