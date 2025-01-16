@@ -48,6 +48,7 @@ ggplot(df_summary, aes(x = Bildungsgruppe, y = mean_ATI)) +
   geom_errorbar(aes(ymin = mean_ATI - sd_ATI, ymax = mean_ATI + sd_ATI), width = 0.2) +
   labs(title = "Mittelwert des ATI-Werts nach Bildungsgruppe", x = "Bildungsgruppe", y = "Mittlerer ATI-Wert") +
   theme_minimal()
+ggsave("Hypothese5.png", width = 6)
 
 #t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$PW )
 
@@ -63,6 +64,7 @@ data %>%
  scale_fill_hue(direction = 1) +
  labs(x = "Geschlecht", y = "Privatsphärewahrnehmung", title = "Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung eines KI-Chatbots als Männer.", subtitle = " ", caption = " ") +
  theme_minimal()
+ggsave("Hypothese6.png", width = 6)
 
 
 
