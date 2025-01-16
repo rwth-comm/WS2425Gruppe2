@@ -6,6 +6,7 @@ install.packages("esquisse")
 library(tidyverse)
 library(ggthemes)
 library(AachenColorPalette)
+library(plotrix)
 
 rwthcolor <- hcictools::rwth.colorpalette()
 df <- readRDS("data/data.rds")
@@ -45,3 +46,21 @@ ggplot(df_summary, aes(x = Bildungsgruppe, y = mean_ATI)) +
   geom_errorbar(aes(ymin = mean_ATI - sd_ATI, ymax = mean_ATI + sd_ATI), width = 0.2) +
   labs(title = "Mittelwert des ATI-Werts nach Bildungsgruppe", x = "Bildungsgruppe", y = "Mittlerer ATI-Wert") +
   theme_minimal()
+
+#t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$PW )
+
+
+library(dplyr)
+library(ggplot2)
+
+data %>%
+ filter(Gender %in% c("Männlich", "Weiblich")) %>%
+ ggplot() +
+ aes(x = Gender, y = PW, fill = Gender) +
+ geom_col() +
+ scale_fill_hue(direction = 1) +
+ labs(x = "Geschlecht", y = "Privatsphärewahrnehmung", title = "Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung eines KI-Chatbots als Männer.", subtitle = " ", caption = " ") +
+ theme_minimal()
+
+
+
