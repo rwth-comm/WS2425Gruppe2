@@ -93,6 +93,7 @@ ggplot(df) +
  theme_minimal()
 ```
 
+
 -   **H2:** Je höher das Alter der Nutzenden, desto höher die Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und Privatsphäredisposition AV)
 
 ```{r}
