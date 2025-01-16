@@ -26,8 +26,6 @@ ggplot(df) +
 ggsave(filename = "histogramAlter.png", width = 10, height = 8, units = "cm")
 
 
-library(ggplot2)
-
 
 library(ggplot2)
 
