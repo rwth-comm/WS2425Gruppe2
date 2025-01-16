@@ -98,6 +98,18 @@ ggplot(df) +
 cor.test(df$Age,df$PD, method = "pearson")
 ```
 
+```{r}
+ggplot(df) +
+ aes(x = Age, y = PD) +
+ geom_point(colour = "#112446") +
+ geom_point(colour = "#112446") +
+ labs(x = " Alter in Jahren ", y = " Privatsphärendisposition ", title = " Zusammenhang zwischen Alter und Privatsphärendisposition n = (", nrow(df),") ", 
+      subtitle = " Punktdiagram Alter und  Privatsphärendisposition ") +
+ theme_minimal() +
+ theme(plot.title = element_text(size = 9L), 
+ plot.subtitle = element_text(size = 7L))
+```
+
 -   **H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die Datenschutzbedenken. (Pearson-Korrelation: Zwischen Vertrauen in die Technologie UV und Datenschutzbedenken AV)
 
 ```{r}

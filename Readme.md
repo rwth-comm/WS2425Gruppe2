@@ -101,6 +101,7 @@ Privatsphäredisposition AV)
     ## sample estimates:
     ##         cor 
     ## -0.06152378
+![](Readme_files/PunktdiagramAlter&Privatsphäre.png)
 
 **H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die
 Datenschutzbedenken. (Pearson-Korrelation: Zwischen Vertrauen in die

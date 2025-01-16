@@ -74,7 +74,21 @@ ggplot(df) +
  labs(x = "Technikaffinität UV ", y = " Digitale Medienutzung (AV)", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung n = (", nrow(df),") ", 
  subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung ") +
  theme_minimal()
+theme(plot.title = element_text(size = 9L), 
+      plot.subtitle = element_text(size = 7L))
 ggsave(filename = "BoxplotATI&MN.png", width = 15, height = 10, units = "cm")
 
+library(ggplot2)
+
+ggplot(df) +
+ aes(x = Age, y = PD) +
+ geom_point(colour = "#112446") +
+ geom_point(colour = "#112446") +
+ labs(x = " Alter in Jahren ", y = " Privatsphärendisposition ", title = " Zusammenhang zwischen Alter und Privatsphärendisposition n = (", nrow(df),") ", 
+      subtitle = " Punktdiagram Alter und  Privatsphärendisposition ") +
+ theme_minimal() +
+ theme(plot.title = element_text(size = 9L), 
+ plot.subtitle = element_text(size = 7L))
+ggsave(filename = "PunktdiagramAlter&Privatsphäre.png", width = 10, height = 8, units = "cm")
 
 
