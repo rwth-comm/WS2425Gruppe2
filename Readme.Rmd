@@ -84,7 +84,7 @@ ggplot(df) +
 cor.test(df$ATI,as.numeric(df$Mn), method = "kendall-tau")
 ```
 
-```{r}
+```{r, echo = F}
 ggplot(df) +
  aes(x = ATI, y = Mn) +
  geom_boxplot(fill = "#4682B4") +
