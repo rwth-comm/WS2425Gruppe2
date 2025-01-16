@@ -61,6 +61,8 @@
     Technikaffinität UV und Digitale Mediennutzung AV)
   
 
+<!-- -->
+
     cor.test(df$ATI,as.numeric(df$Mn), method = "kendall")
 
     ## 
@@ -72,6 +74,7 @@
     ## sample estimates:
     ##        tau 
     ## 0.08768496
+    
     
 ![](Readme_files/Hypothese1.png)
 
