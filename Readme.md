@@ -74,13 +74,9 @@
     ##        tau 
     ## 0.08768496
 
-<<<<<<< HEAD
 -   **H2:** Je höher das Alter der Nutzenden, desto höher die
     Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und
     Privatsphäredisposition AV)
-=======
-![](Readme_files/Hypothese1.png)
->>>>>>> 221fd936d84b8c9a9105c4c03626106025217b96
 
 <!-- -->
 
@@ -95,15 +91,8 @@
     ## 95 percent confidence interval:
     ##  -0.28663885 -0.03355924
     ## sample estimates:
-<<<<<<< HEAD
     ##        cor 
     ## -0.1627752
-=======
-    ##         cor 
-    ## -0.06152378
-    
-
->>>>>>> 221fd936d84b8c9a9105c4c03626106025217b96
 
 -   **H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger
     sind die Datenschutzbedenken. (Pearson-Korrelation: Zwischen
