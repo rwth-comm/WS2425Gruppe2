@@ -12,12 +12,12 @@ editor_options:
 library(tidyverse)
 library(ggthemes)
 library(AachenColorPalette)
-libary(jmv)
+library(jmv)
 
 df <- readRDS("data/data.rds")
-display_aachen_colors(
-libary(ggplot2)
-)
+display_aachen_colors()
+library(ggplot2)
+
 ```
 
 # Akzeptanz und Privatsphäre von KI-Chatbots in der Verwaltung
@@ -98,7 +98,16 @@ cor.test(df$NZV,df$PW, method = "pearson")
 
 **Komplexe Zusammenhangshypothesen:**
 
--   **H4:** Je höher die usability und die wahrgenommene Privatsphäredisposition des Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung. (Multiple lineare Regression: Zwischen usability UV1 sowie Privatsphäredisposition UV2 und Privatsphären-Wahrnehmung AV)
+-   **H4:** Je höher die Technikaffinität und die wahrgenommene Privatsphäredisposition des Chatbots sind, desto positiver ist die Privatsphären-Wahrnehmung. (Multiple lineare Regression: Zwischen Technikaffinität UV1 sowie Privatsphäredisposition UV2 und Privatsphären-Wahrnehmung AV)
+
+```{r} 
+jmv::linReg(df,
+            dep = c("PW"),
+            covs = c("ATI", "PD"),
+            blocks = c("PD", "ATI"),
+            r2Adj = TRUE, stdEst = TRUE, modelTest = TRUE)
+
+```
 
 **Einfache Unterschiedshypothesen:**
 
@@ -125,8 +134,11 @@ t.test(df$BIATT,mu=3)
 **Komplexe Unterschiedshypothesen:**
 
 -   **H8:** Jüngere und technikaffine Nutzende haben eine höhere Nutzungsintention und eine positivere Privatsphären-Wahrnehmung des Chatbots als ältere und technikavers Nutzende. (F-Test MANOVA: Zwischen Alter UV1 & Technikaffinität UV2 und Nutzungsintention AV1 & wahrgenommene Privatsphäre und Datensicherheit AV2)
+```{r}
+df$altersgruppe <- cut(df$Age, labels = c("jung", "alt"), breaks = c(0, median(df$Age,na.rm = TRUE), 100))
+df$atigruppe <- cut(df$ATI, labels = c("niedrig", "hoch"), breaks = c(0, median(df$ATI,na.rm = TRUE), 100))
+mancova(df, deps = c("PW", "BI"), factors = c("altersgruppe", "atigruppe"), multivar = "wilks")
+```
 
 ![](Readme_files/Hypothese 8.png)
-```{r}
 
-```

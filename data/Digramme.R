@@ -32,8 +32,9 @@ library(ggplot2)
 library(dplyr)
 
 ggplot(df) +
+
  aes(x = Age, y = Mn) +
- geom_boxplot(fill = "#112446") +
+ geom_boxplot(fill = "green") +
  labs(x = "Alter in Jahren", y = "Digitale Mediennutzung", 
  title = "Zusammenhang von Alter und Nutzung digitaler Medien") +
  theme_minimal()
@@ -53,8 +54,7 @@ ggsave(filename = "Hypothese2.png", width = 10)
 
 
 #H3
-
-ggplot(data) +
+ggplot(df) +
   aes(x = NZV, y = PD)  +
   geom_point(colour = "#112446") +
   geom_smooth(method = "lm") +
@@ -62,7 +62,7 @@ ggplot(data) +
   scale_y_continuous(breaks = c(1:6), limits = c(0.5, 6.5)) +
   labs(x = "Vertrauen in die Technologie ", y = "Privatsphärebedenken", 
        title = "Signifikanter Zusammenhang zwischen Vertrauen 
-       in die Technologie und Privatsphärebedenken") +
+       in die Technologie und Privatsphärebedenken", subtitle = "Punktdiagramm mit Korrelationsgeraden") +
   theme_minimal()
 ggsave ("Hypothese 3 .png")
 
@@ -95,18 +95,27 @@ ggsave("Hypothese5.png", width = 6)
 #t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$PW )
 
 
-library(dplyr)
-library(ggplot2)
+#H6
 
-data %>%
- filter(Gender %in% c("Männlich", "Weiblich")) %>%
- ggplot() +
- aes(x = Gender, y = PW, fill = Gender) +
- geom_col() +
- scale_fill_hue(direction = 1) +
- labs(x = "Geschlecht", y = "Privatsphärewahrnehmung", title = "Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung eines KI-Chatbots als Männer.", subtitle = " ", caption = " ") +
- theme_minimal()
-ggsave("Hypothese6.png", width = 6)
+df %>% 
+  filter(Gender != "Divers"&Gender!= "Keine Angabe") %>%
+  group_by(Gender) %>% 
+  summarise(mean_cse = mean(PW)-1, sem_cse = std.error(PW)) %>%
+  ggplot() +
+  aes(x = Gender, fill = Gender, weight = mean_cse, ymin = mean_cse - sem_cse, ymax = mean_cse + sem_cse ) +
+  geom_bar( width = 0.5) +
+  scale_fill_manual(values=c("blue", "red"), guide="none") + 
+  geom_errorbar(width = 0.2) +
+  ylim(0,5) +
+  theme_minimal() +
+  labs(title = " Frauen haben eine höhere Privatsphärewahrnehmung als Männer", 
+       subtitle = "Balkendiagramm: PW im Vergleich zwischen Männern und Frauen ", 
+       x = "Geschlecht",
+       y = "PW [0 - 5]",
+       fill = "Geschlecht",
+       caption = "Fehlerbalken zeigen Standardfehler des Mittelwertes") +
+  NULL
+
 
 #H7
 library(dplyr)
@@ -114,33 +123,13 @@ library(ggplot2)
 
 ggplot(df) +
   aes(x = BI) +
-  geom_histogram(bins = 35L, fill = "black") +
+  geom_histogram(bins = 35L, fill = "red") +
+  geom_vline(xintercept = 3.5 , color = "black", linetype = "dashed") +
   labs(title = "Verteilung der Nutzungsintentionen (BI)", 
        x = "Nutzungsintention (BI)", 
        y = "Häufigkeit") +
   theme_minimal()
 ggsave("Hypothese_7.png", width = 6)
 
-#H8 
 
-library(dplyr)
-library(ggplot2)
-
-data <- data.frame(
-  Alter = rep(c("jung", "alt"), each = 1),
-  Technikaffinität = rep(c("technikaffin", "technikavers"), 2),
-  Nutzungsintention = c(7.2, 5.1, 6.5, 4.8),
-  Wahrnehmung_der_Privatsphäre = c(6.8, 4.5, 6.2, 4.2)
-)
-
-ggplot(data) +
-  geom_bar(aes(x = interaction(Alter, Technikaffinität), y = Nutzungsintention, fill = "Nutzungsintention"), 
-           stat = "identity", position = "dodge") +
-  geom_bar(aes(x = interaction(Alter, Technikaffinität), y = Wahrnehmung_der_Privatsphäre, fill = "Wahrnehmung der Privatsphäre"),
-           stat = "identity", position = "dodge") +
-  scale_fill_manual(values = c("Nutzungsintention" = "blue", "Wahrnehmung der Privatsphäre" = "orange")) +
-  labs(x = "Gruppen (Alter und Technikaffinität)", y = "Durchschnittswerte") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggsave("Hypothese_8.png", width = 6)
 
