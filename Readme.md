@@ -200,3 +200,5 @@
     Chatbots als ältere und technikavers Nutzende. (F-Test MANOVA:
     Zwischen Alter UV1 & Technikaffinität UV2 und Nutzungsintention AV1
     & wahrgenommene Privatsphäre und Datensicherheit AV2)
+    
+![](Readme_files/Hypothese_8.png)
