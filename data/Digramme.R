@@ -89,5 +89,15 @@ data %>%
  theme_minimal()
 ggsave("Hypothese6.png", width = 6)
 
+#H7
+library(dplyr)
+library(ggplot2)
 
+ggplot(df) +
+  aes(x = BI) +
+  geom_histogram(bins = 35L, fill = "black") +
+  labs(title = "Verteilung der Nutzungsintentionen (BI)", 
+       x = "Nutzungsintention (BI)", 
+       y = "Häufigkeit") +
+  theme_minimal()
 
