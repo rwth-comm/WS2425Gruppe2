@@ -15,7 +15,7 @@
 
 ##Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
-##Operationalisierung
+## **Operationalisierung**
 
 -   **Technikaffinität:** Affinity towards technology interaction (ATI)
     nach [Franke et
