@@ -26,7 +26,7 @@ libary(ggplot2)
 
 -   Emilia
 -   Monique Beckers
--   Zehra
+-   Zehra Aksoy
 -   Elcin-Havva Konar
 
 ##Forschungsfrage
