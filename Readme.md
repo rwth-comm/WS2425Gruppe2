@@ -7,15 +7,15 @@
 -   Zehra Aksoy
 -   Elcin-Havva Konar
 
-\##Forschungsfrage
+##Forschungsfrage
 
 -   Welche Faktoren beeinflussen die Akzeptanz und die
     Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
     Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
-\##Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
+##Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
-\##Operationalisierung
+##Operationalisierung
 
 -   **Technikaffinität:** Affinity towards technology interaction (ATI)
     nach [Franke et
