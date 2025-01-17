@@ -174,6 +174,7 @@
 -   **H7:** Die Nutzungsintention der Stichprobe, gemessen auf einer
     Skala von 1-6, ist höher als 3,5. (Einfacher T-Test:
     Nutzungsintention (AV))
+    ![](Readme_files/Hypothese7.png)
 
 <!-- -->
 

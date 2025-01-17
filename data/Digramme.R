@@ -100,4 +100,5 @@ ggplot(df) +
        x = "Nutzungsintention (BI)", 
        y = "Häufigkeit") +
   theme_minimal()
+ggsave("Hypothese7.png", width = 6)
 
