@@ -1,31 +1,20 @@
+
 install.packages("tidyverse")
 install.packages("ggthemes")
 remotes::install_github("christianholland/AachenColorPalette")
 install.packages("esquisse")
+install.packages("plotrix")
 
 library(tidyverse)
 library(ggthemes)
 library(AachenColorPalette)
+library(plotrix)
 
+#rwthcolor <- hcictools::rwth.colorpalette()
 df <- readRDS("data/data.rds")
 
-library(ggplot2)
 
-ggplot(data) +
-  aes(x = NZV, y = PD)  +
-  geom_point(colour = "#112446") +
-  geom_smooth(method = "lm") +
-  scale_x_continuous(breaks = c(1:6), limits = c(0.5,6.5)) +
-  scale_y_continuous(breaks = c(1:6), limits = c(0.5, 6.5)) +
-  labs(x = "Vertrauen in die Technologie ", y = "Privatsphärebedenken", 
-       title = "Signifikanter Zusammenhang zwischen Vertrauen 
-       in die Technologie und Privatsphärebedenken") +
-  theme_minimal()
-
-
-
-
-
+library(dplyr)
 library(ggplot2)
 
 ggplot(df) +
@@ -39,27 +28,119 @@ ggplot(df) +
 ggsave(filename = "histogramAlter.png", width = 10, height = 8, units = "cm")
 
 
-
 library(ggplot2)
+library(dplyr)
 
-ggplot(raw.short) +
- aes(x = nzv, y = pd) +
- geom_point(colour = "#112446") +
- labs(x = " ", y = " ", 
- title = " ", subtitle = " ", caption = " ") +
+ggplot(df) +
+ aes(x = Age, y = Mn) +
+ geom_boxplot(fill = "#112446") +
+ labs(x = "Alter in Jahren", y = "Digitale Mediennutzung", 
+ title = "Zusammenhang von Alter und Nutzung digitaler Medien") +
  theme_minimal()
-
+ggsave(filename = "Hypothese1.png", width = 10)
 
 library(ggplot2)
+library(dplyr)
+
+ggplot(df) +
+ aes(x = Age, y = PD) +
+ geom_point(colour = "#112446") +
+ labs(x = "Alter in Jahren", y = "Privatsphärenakzeptanz", 
+ title = "Zusammenhang von Alter und Privatspährendisposition", subtitle = "Punktdiagramm") +
+ theme_minimal()
+ggsave(filename = "Hypothese2.png", width = 10)
+
+
+
+#H3
 
 ggplot(data) +
- aes(x = NZV, y = PD) +
- geom_point(colour = "#112446") +
- labs(x = " ", y = " ", title = " ", 
- subtitle = " ", caption = " ") +
+  aes(x = NZV, y = PD)  +
+  geom_point(colour = "#112446") +
+  geom_smooth(method = "lm") +
+  scale_x_continuous(breaks = c(1:6), limits = c(0.5,6.5)) +
+  scale_y_continuous(breaks = c(1:6), limits = c(0.5, 6.5)) +
+  labs(x = "Vertrauen in die Technologie ", y = "Privatsphärebedenken", 
+       title = "Signifikanter Zusammenhang zwischen Vertrauen 
+       in die Technologie und Privatsphärebedenken") +
+  theme_minimal()
+ggsave ("Hypothese 3 .png")
+
+
+
+library(ggplot2)
+library(dplyr)
+
+df_clean <- df %>% 
+  filter(!is.na(Bildungsabschluss) & !is.na(ATI)) %>%
+  mutate(Bildungsgruppe = case_when( 
+    Bildungsabschluss >= "Abitur" ~ "Abitur oder höher", 
+    Bildungsabschluss < "Abitur" ~ "Niedriger als Abitur"
+  ))
+
+df_summary <- df_clean %>%
+  group_by(Bildungsgruppe) %>%
+  summarise(
+    mean_ATI = mean(ATI, na.rm = TRUE),
+    sd_ATI = std.error(ATI, na.rm = TRUE)
+  )
+
+ggplot(df_summary, aes(x = Bildungsgruppe, y = mean_ATI)) +
+  geom_bar(width = 0.5, stat = "identity", fill ="red") +
+  geom_errorbar(aes(ymin = mean_ATI - sd_ATI, ymax = mean_ATI + sd_ATI), width = 0.2) +
+  labs(title = "Mittelwert des ATI-Werts nach Bildungsgruppe", x = "Bildungsgruppe", y = "Mittlerer ATI-Wert") +
+  theme_minimal()
+ggsave("Hypothese5.png", width = 6)
+
+#t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$PW )
+
+
+library(dplyr)
+library(ggplot2)
+
+data %>%
+ filter(Gender %in% c("Männlich", "Weiblich")) %>%
+ ggplot() +
+ aes(x = Gender, y = PW, fill = Gender) +
+ geom_col() +
+ scale_fill_hue(direction = 1) +
+ labs(x = "Geschlecht", y = "Privatsphärewahrnehmung", title = "Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung eines KI-Chatbots als Männer.", subtitle = " ", caption = " ") +
  theme_minimal()
+ggsave("Hypothese6.png", width = 6)
 
+#H7
+library(dplyr)
+library(ggplot2)
 
+ggplot(df) +
+  aes(x = BI) +
+  geom_histogram(bins = 35L, fill = "black") +
+  labs(title = "Verteilung der Nutzungsintentionen (BI)", 
+       x = "Nutzungsintention (BI)", 
+       y = "Häufigkeit") +
+  theme_minimal()
+ggsave("Hypothese_7.png", width = 6)
 
+#H8 
 
+library(dplyr)
+library(ggplot2)
+
+data <- data.frame(
+  Alter = rep(c("jung", "alt"), each = 1),
+  Technikaffinität = rep(c("technikaffin", "technikavers"), 2),
+  Nutzungsintention = c(7.2, 5.1, 6.5, 4.8),
+  Wahrnehmung_der_Privatsphäre = c(6.8, 4.5, 6.2, 4.2)
+)
+
+ggplot(data) +
+  geom_bar(aes(x = interaction(Alter, Technikaffinität), y = Nutzungsintention, fill = "Nutzungsintention"), 
+           stat = "identity", position = "dodge") +
+  geom_bar(aes(x = interaction(Alter, Technikaffinität), y = Wahrnehmung_der_Privatsphäre, fill = "Wahrnehmung der Privatsphäre"),
+           stat = "identity", position = "dodge") +
+  scale_fill_manual(values = c("Nutzungsintention" = "blue", "Wahrnehmung der Privatsphäre" = "orange")) +
+  labs(x = "Gruppen (Alter und Technikaffinität)", y = "Durchschnittswerte") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+ggsave("Hypothese_8.png", width = 6)
 

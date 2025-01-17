@@ -21,20 +21,21 @@ libary(ggplot2)
 ```
 
 # Akzeptanz und Privatsphäre von KI-Chatbots in der Verwaltung
+
 ## **Teammitglieder**
 
--   Emilia Momot
--   Monique
--   Zehra
+-   Emilia
+-   Monique Beckers
+-   Zehra Aksoy
 -   Elcin-Havva Konar
 
-##Forschungsfrage
+## **Forschungsfrage**
 
 -   Welche Faktoren beeinflussen die Akzeptanz und die Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
-##Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
+Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
-##Operationalisierung
+## **Operationalisierung**
 
 -   **Technikaffinität:** Affinity towards technology interaction (ATI) nach [Franke et al. (2019)](10.1080/10447318.2018.1456150 "Franke, T., Attig, C., & Wessel, D. (2019). A Personal Resource for Technology Interaction: Development and Validation of the Affinity for Technology Interaction (ATI) Scale. International Journal of Human–Computer Interaction, 35(6), 456-467, DOI: 10.1080/10447318.2018.1456150")
 
@@ -56,10 +57,21 @@ libary(ggplot2)
 -   **Datenschutzbedenken:** Development of measures of online privacy concern and protection for use on the Internet (IUIPC); (Buchanan, Tom & Joinson, Adam & Paine Schofield, Carina & Reips, Ulf-Dietrich. (2007).
     Development of measures of online privacy concern and protection for use on the Internet.Journal of the American Society for Information Science and Technology.
     <http://dx.doi.org/10.1002/asi.20459>)
-    
+
 ## Altersverteilung der Stichprobe im Histogram
 
-![](Readme_files/histogramAlter.png)
+
+```{r, echo = F}
+ggplot(df) +
+ aes(x = Age) +
+  geom_histogram(bins = 30L, fill = "#112446") +
+  geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
+  geom_text(x = mean(df$Age, na.rm = TRUE), y = 20, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90, vjust = 1.5 ) +
+ labs(x = "Alter in Jahren", y = "Anzahl der Proband*innen", title = paste0("Altersverteiliung n = (", nrow(df),")"), 
+ subtitle = " Histogram der Altersverteilung", caption = " 30 Bins ") +
+ theme_minimal()
+
+```
 
 ## **Hypothesen**
 
@@ -77,9 +89,8 @@ cor.test(df$ATI,as.numeric(df$Mn), method = "kendall-tau")
 cor.test(df$Age,df$PD, method = "pearson")
 ```
 
--   **H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die Datenschutzbedenken. (Pearson-Korrelation: Zwischen Vertrauen in die Technologie UV und Datenschutzbedenken AV)
 
-![] (Readme_files/Hypothese 3 .png)
+-   **H3:** Je höher das Vertrauen in den KI-Chatbot, desto niedrieger sind die Datenschutzbedenken. (Pearson-Korrelation: Zwischen Vertrauen in die Technologie UV und Datenschutzbedenken AV)
 
 ```{r}
 cor.test(df$NZV,df$PW, method = "pearson")
@@ -105,6 +116,8 @@ t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$
 
 -   **H7:** Die Nutzungsintention der Stichprobe, gemessen auf einer Skala von 1-6, ist höher als 3,5. (Einfacher T-Test: Nutzungsintention (AV))
 
+![](Readme_files/Hypothese7.png)
+
 ```{r}
 t.test(df$BIATT,mu=3)
 ```
@@ -113,6 +126,7 @@ t.test(df$BIATT,mu=3)
 
 -   **H8:** Jüngere und technikaffine Nutzende haben eine höhere Nutzungsintention und eine positivere Privatsphären-Wahrnehmung des Chatbots als ältere und technikavers Nutzende. (F-Test MANOVA: Zwischen Alter UV1 & Technikaffinität UV2 und Nutzungsintention AV1 & wahrgenommene Privatsphäre und Datensicherheit AV2)
 
+![](Readme_files/Hypothese 8.png)
 ```{r}
 
 ```
