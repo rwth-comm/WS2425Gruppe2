@@ -13,7 +13,7 @@
     Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
     Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
-##Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
+Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
 ## **Operationalisierung**
 
