@@ -175,7 +175,7 @@
     Skala von 1-6, ist höher als 3,5. (Einfacher T-Test:
     Nutzungsintention (AV))
     
-![](Readme_files/Hypothese7.png)
+![](Readme_files/Hypothese_7.png)
 
 <!-- -->
 
