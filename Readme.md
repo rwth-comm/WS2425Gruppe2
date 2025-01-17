@@ -7,7 +7,7 @@
 -   Zehra Aksoy
 -   Elcin-Havva Konar
 
-##Forschungsfrage
+## **Forschungsfrage**
 
 -   Welche Faktoren beeinflussen die Akzeptanz und die
     Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
