@@ -6,15 +6,27 @@ install.packages("esquisse")
 library(tidyverse)
 library(ggthemes)
 library(AachenColorPalette)
-library(plotrix)
 
-rwthcolor <- hcictools::rwth.colorpalette()
 df <- readRDS("data/data.rds")
+
+library(ggplot2)
+
+ggplot(data) +
+  aes(x = NZV, y = PD)  +
+  geom_point(colour = "#112446") +
+  geom_smooth(method = "lm") +
+  scale_x_continuous(breaks = c(1:6), limits = c(0.5,6.5)) +
+  scale_y_continuous(breaks = c(1:6), limits = c(0.5, 6.5)) +
+  labs(x = "Vertrauen in die Technologie ", y = "Privatsphärebedenken", 
+       title = "Signifikanter Zusammenhang zwischen Vertrauen 
+       in die Technologie und Privatsphärebedenken") +
+  theme_minimal()
+
+
 
 
 
 library(ggplot2)
-
 
 ggplot(df) +
  aes(x = Age) +
@@ -26,55 +38,28 @@ ggplot(df) +
  theme_minimal()
 ggsave(filename = "histogramAlter.png", width = 10, height = 8, units = "cm")
 
-library(ggplot2)
-library(dplyr)
-
-df_clean <- df %>% 
-  filter(!is.na(Bildungsabschluss) & !is.na(ATI)) %>%
-  mutate(Bildungsgruppe = case_when( 
-    Bildungsabschluss > "Abitur" ~ "Höher als Abitur", 
-    Bildungsabschluss < "Abitur" ~ "Niedriger als Abitur"
-  ))
-
-df_summary <- df_clean %>%
-  group_by(Bildungsgruppe) %>%
-  summarise(
-    mean_ATI = mean(ATI, na.rm = TRUE),
-    sd_ATI = sd(ATI, na.rm = TRUE)
-  )
-
-ggplot(df_summary, aes(x = Bildungsgruppe, y = mean_ATI)) +
-  geom_bar(width = 0.5, stat = "identity", fill = rwthcolor$bordeaux) +
-  geom_errorbar(aes(ymin = mean_ATI - sd_ATI, ymax = mean_ATI + sd_ATI), width = 0.2) +
-  labs(title = "Mittelwert des ATI-Werts nach Bildungsgruppe", x = "Bildungsgruppe", y = "Mittlerer ATI-Wert") +
-  theme_minimal()
-
-#t.test( filter(df, Gender == "Weiblich")$PW , filter(df, Gender == "Männlich")$PW )
 
 
-library(dplyr)
 library(ggplot2)
 
-data %>%
- filter(Gender %in% c("Männlich", "Weiblich")) %>%
- ggplot() +
- aes(x = Gender, y = PW, fill = Gender) +
- geom_col() +
- scale_fill_hue(direction = 1) +
- labs(x = "Geschlecht", y = "Privatsphärewahrnehmung", title = "Frauen haben eine höheres Empfinden der Privatsphäre bei der Nutzung eines KI-Chatbots als Männer.", subtitle = " ", caption = " ") +
+ggplot(raw.short) +
+ aes(x = nzv, y = pd) +
+ geom_point(colour = "#112446") +
+ labs(x = " ", y = " ", 
+ title = " ", subtitle = " ", caption = " ") +
  theme_minimal()
 
 
-
 library(ggplot2)
 
-ggplot(df) +
- aes(x = ATI, y = Mn) +
- geom_boxplot(fill = "#112446") +
- labs(x = "Technikaffinität UV ", y = " Digitale Medienutzung (AV)", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung n = (", nrow(df),") ", 
- subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung ") +
+ggplot(data) +
+ aes(x = NZV, y = PD) +
+ geom_point(colour = "#112446") +
+ labs(x = " ", y = " ", title = " ", 
+ subtitle = " ", caption = " ") +
  theme_minimal()
-ggsave(filename = "BoxplotATI&MN.png", width = 15, height = 10, units = "cm")
+
+
 
 
 
