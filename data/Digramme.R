@@ -12,7 +12,7 @@ rwthcolor <- hcictools::rwth.colorpalette()
 df <- readRDS("data/data.rds")
 
 
-
+library(dplyr)
 library(ggplot2)
 
 ggplot(df) +
@@ -27,29 +27,26 @@ ggsave(filename = "histogramAlter.png", width = 10, height = 8, units = "cm")
 
 
 library(ggplot2)
-
-
-library(ggplot2)
+library(dplyr)
 
 ggplot(df) +
- aes(x = ATI, y = Mn) +
- geom_boxplot(fill = "#4682B4") +
- labs(x = " Technikaffinität ", y = " Digitale Mediennutzung ", title = " Zusammenhang zwischen Technikaffinität und digialer Mediennutzung  n = (", nrow(df),")", 
- subtitle = " Bloxplot Technikaffinität und digialer Mediennutzung ") +
+ aes(x = Age, y = Mn) +
+ geom_boxplot(fill = "#112446") +
+ labs(x = "Alter in Jahren", y = "Digitale Mediennutzung", 
+ title = "Zusammenhang von Alter und Nutzung digitaler Medien") +
  theme_minimal()
-ggsave(filename = "Hypothese1.png", width = 10, height = 8, units = "cm")
-
+ggsave(filename = "Hypothese1.png", width = 10)
 
 library(ggplot2)
+library(dplyr)
 
 ggplot(df) +
-  aes(x = Age, y = PD) +
-  geom_point(colour = "#112446") +
-  geom_point(colour = "#112446") +
-  labs(x = " Alter in Jahren ", y = " Privatsphärendisposition ", title = " Zusammenhang zwischen Alter und Privatsphärendisposition n = (", nrow(df),") ", 
-       subtitle = " Punktdiagramm Alter und  Privatsphärendisposition ") +
-  theme_minimal()
-ggsave(filename = "PunktdiagrammAlter&Privatsphäre.png", width = 10, height = 8, units = "cm")
+ aes(x = Age, y = PD) +
+ geom_point(colour = "#112446") +
+ labs(x = "Alter in Jahren", y = "Privatsphärenakzeptanz", 
+ title = "Zusammenhang von Alter und Privatspährendisposition", subtitle = "Punktdiagramm") +
+ theme_minimal()
+ggsave(filename = "Hypothese2.png", width = 10)
 
 
 library(ggplot2)
@@ -92,5 +89,38 @@ data %>%
  theme_minimal()
 ggsave("Hypothese6.png", width = 6)
 
+#H7
+library(dplyr)
+library(ggplot2)
 
+ggplot(df) +
+  aes(x = BI) +
+  geom_histogram(bins = 35L, fill = "black") +
+  labs(title = "Verteilung der Nutzungsintentionen (BI)", 
+       x = "Nutzungsintention (BI)", 
+       y = "Häufigkeit") +
+  theme_minimal()
+ggsave("Hypothese_7.png", width = 6)
 
+#H8 
+
+library(dplyr)
+library(ggplot2)
+
+data <- data.frame(
+  Alter = rep(c("jung", "alt"), each = 1),
+  Technikaffinität = rep(c("technikaffin", "technikavers"), 2),
+  Nutzungsintention = c(7.2, 5.1, 6.5, 4.8),
+  Wahrnehmung_der_Privatsphäre = c(6.8, 4.5, 6.2, 4.2)
+)
+
+ggplot(data) +
+  geom_bar(aes(x = interaction(Alter, Technikaffinität), y = Nutzungsintention, fill = "Nutzungsintention"), 
+           stat = "identity", position = "dodge") +
+  geom_bar(aes(x = interaction(Alter, Technikaffinität), y = Wahrnehmung_der_Privatsphäre, fill = "Wahrnehmung der Privatsphäre"),
+           stat = "identity", position = "dodge") +
+  scale_fill_manual(values = c("Nutzungsintention" = "blue", "Wahrnehmung der Privatsphäre" = "orange")) +
+  labs(x = "Gruppen (Alter und Technikaffinität)", y = "Durchschnittswerte") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+ggsave("Hypothese_8.png", width = 6)

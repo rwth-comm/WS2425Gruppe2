@@ -4,18 +4,18 @@
 
 -   Emilia Momot
 -   Monique Beckers
--   Zehra
+-   Zehra Aksoy
 -   Elcin-Havva Konar
 
-\##Forschungsfrage
+## **Forschungsfrage**
 
 -   Welche Faktoren beeinflussen die Akzeptanz und die
     Privatsphären-Wahrnehmung bei der Nutzung eines KI-Chatbots in der
     Kommunalverwaltung zur Unterstützung bei Formularprozessen?
 
-\##Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
+Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
 
-\##Operationalisierung
+## **Operationalisierung**
 
 -   **Technikaffinität:** Affinity towards technology interaction (ATI)
     nach [Franke et
@@ -59,7 +59,9 @@
 -   **H1:** Es gibt einen positiven Zusammenhang zwischen der
     Technikaffinität und digitaler Mediennutzung (Kendall-Tau: Zwischen
     Technikaffinität UV und Digitale Mediennutzung AV)
-    ![](Readme_files/Hypothese1.png)
+    
+![](Readme_files/Hypothese1.png)
+
 
 <!-- -->
 
@@ -74,12 +76,14 @@
     ## sample estimates:
     ##        tau 
     ## 0.08768496
+    
+    
 
 -   **H2:** Je höher das Alter der Nutzenden, desto höher die
     Privatsphäredisposition. (Pearson-Korrelation: Zwischen Alter UV und
     Privatsphäredisposition AV)
-    ![](Readme_files/PunktdiagrammAlter&Privatsphäre.png)
-
+  
+![](Readme_files/Hypothese2.png)
 <!-- -->
 
     cor.test(df$Age,df$PD, method = "pearson")
@@ -170,6 +174,8 @@
 -   **H7:** Die Nutzungsintention der Stichprobe, gemessen auf einer
     Skala von 1-6, ist höher als 3,5. (Einfacher T-Test:
     Nutzungsintention (AV))
+    
+![](Readme_files/Hypothese_7.png)
 
 <!-- -->
 
@@ -194,3 +200,5 @@
     Chatbots als ältere und technikavers Nutzende. (F-Test MANOVA:
     Zwischen Alter UV1 & Technikaffinität UV2 und Nutzungsintention AV1
     & wahrgenommene Privatsphäre und Datensicherheit AV2)
+    
+![](Readme_files/Hypothese_8.png)
