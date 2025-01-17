@@ -1,11 +1,4 @@
 ---
-output:
-  pdf_document: default
-  html_document: default
----
-<<<<<<< HEAD
-<<<<<<< HEAD
----
 title: "Untitled"
 author: "Gruppe 2"
 output: md_document
