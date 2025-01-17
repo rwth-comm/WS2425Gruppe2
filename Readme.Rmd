@@ -126,6 +126,7 @@ t.test(df$BIATT,mu=3)
 
 -   **H8:** Jüngere und technikaffine Nutzende haben eine höhere Nutzungsintention und eine positivere Privatsphären-Wahrnehmung des Chatbots als ältere und technikavers Nutzende. (F-Test MANOVA: Zwischen Alter UV1 & Technikaffinität UV2 und Nutzungsintention AV1 & wahrgenommene Privatsphäre und Datensicherheit AV2)
 
+![](Readme_files/Hypothese 8.png)
 ```{r}
 
 ```

@@ -102,3 +102,24 @@ ggplot(df) +
   theme_minimal()
 ggsave("Hypothese_7.png", width = 6)
 
+#H8 
+
+library(dplyr)
+library(ggplot2)
+
+data <- data.frame(
+  Alter = rep(c("jung", "alt"), each = 1),
+  Technikaffinität = rep(c("technikaffin", "technikavers"), 2),
+  Nutzungsintention = c(7.2, 5.1, 6.5, 4.8),
+  Wahrnehmung_der_Privatsphäre = c(6.8, 4.5, 6.2, 4.2)
+)
+
+ggplot(data) +
+  geom_bar(aes(x = interaction(Alter, Technikaffinität), y = Nutzungsintention, fill = "Nutzungsintention"), 
+           stat = "identity", position = "dodge") +
+  geom_bar(aes(x = interaction(Alter, Technikaffinität), y = Wahrnehmung_der_Privatsphäre, fill = "Wahrnehmung der Privatsphäre"),
+           stat = "identity", position = "dodge") +
+  scale_fill_manual(values = c("Nutzungsintention" = "blue", "Wahrnehmung der Privatsphäre" = "orange")) +
+  labs(x = "Gruppen (Alter und Technikaffinität)", y = "Durchschnittswerte") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
