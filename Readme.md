@@ -391,3 +391,116 @@ Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
     ##    Residuals                 PW                       323.6285026    224      1.4447701                             
     ##                              BI                       321.5241255    224      1.4353756                             
     ##  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+    # Altersgruppe und Technikaffinität gruppieren
+    df$altersgruppe <- cut(df$Age, labels = c("jung", "alt"), breaks = c(-Inf, median(df$Age, na.rm = TRUE), Inf))
+
+    df$atigruppe <- cut(df$ATI, labels = c("niedrig", "hoch"), breaks = c(-Inf, median(df$ATI, na.rm = TRUE), Inf))
+
+    # ANOVA für Nutzungseinstellung (BI)
+    anovaresult <- jmv::ANOVA(df, dep=BI, factors = c("altersgruppe", "atigruppe"), emmPlots = TRUE, emmTables = TRUE, 
+                            emMeans =list(c("altersgruppe"),c("atigruppe"),                                                                                    c("altersgruppe", "atigruppe"),
+                                                                 c("atigruppe", "altersgruppe")))
+
+    anovaresult$main
+
+    ## 
+    ##  ANOVA - BI                                                                                   
+    ##  ──────────────────────────────────────────────────────────────────────────────────────────── 
+    ##                              Sum of Squares    df     Mean Square    F            p           
+    ##  ──────────────────────────────────────────────────────────────────────────────────────────── 
+    ##    altersgruppe                   0.5950046      1      0.5950046    0.4145289    0.5203384   
+    ##    atigruppe                     11.1248576      1     11.1248576    7.7504856    0.0058288   
+    ##    altersgruppe:atigruppe         3.5285780      1      3.5285780    2.4582960    0.1183171   
+    ##    Residuals                    321.5241255    224      1.4353756                             
+    ##  ────────────────────────────────────────────────────────────────────────────────────────────
+
+    # Haupteffekte und Interaktionseffekte extrahieren
+    haupteffekt1 <- anovaresult$emm[[1]]$emmTable$asDF  # Haupteffekt Altersgruppe
+    haupteffekt2 <- anovaresult$emm[[2]]$emmTable$asDF  # Haupteffekt Technikaffinität
+    interaktionseffekt <- anovaresult$emm[[3]]$emmTable$asDF # Interaktion Altersgruppe x Technikaffinität
+    interaktionseffekt2 <- anovaresult$emm[[4]]$emmTable$asDF 
+
+    # Visualisierung der Haupteffekte und Interaktionseffekte für Nutzungseinstellung (BI)
+    haupteffekt1 %>% 
+    ggplot() +
+     aes(x = altersgruppe, y = mean, ymin = lower, ymax = upper) +
+     geom_errorbar(width = 0.2, colour = "black") +
+     geom_point() +
+     theme_minimal() +
+     labs(title = "Haupteffekt Altersgruppe auf Nutzungseinstellung")
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+
+    haupteffekt2 %>% 
+    ggplot() +
+     aes(x = atigruppe, y = mean, ymin = lower, ymax = upper) +
+     geom_errorbar(width = 0.2, colour = "black") +
+     geom_point() +
+     theme_minimal() +
+     labs(title = "Haupteffekt Technikaffinität auf Nutzungseinstellung")
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-12-2.png)
+
+    interaktionseffekt %>% 
+      ggplot() +
+     aes(x = atigruppe, colour = altersgruppe, y = mean, ymin = lower, ymax = upper) +
+     geom_errorbar(width = 0.2, colour = "black") +
+     geom_point() +
+     geom_line(aes(group = altersgruppe)) +
+     theme_minimal() +
+     labs(title = "Interaktionseffekt zwischen Altersgruppe und Technikaffinität auf Nutzungseinstellung",
+    x = "Technikaffinität",
+        y = "Mittelwert der Nutzungseinstellung",
+        colour = "Altersgruppe")
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-12-3.png)
+
+    interaktionseffekt2 %>% 
+      ggplot() +
+      aes(x = atigruppe, colour = altersgruppe, y = mean, ymin = lower, ymax = upper) +
+      geom_errorbar(width = 0.2, colour = "black") +
+      geom_point() +
+      geom_line(aes(group = altersgruppe)) +
+      theme_minimal() +
+      labs(
+        title = "Interaktionseffekt zwischen Altersgruppe und Technikaffinität auf Privatsphären-Wahrnehmung",
+        x = "Technikaffinität",
+        y = "Mittelwert der Privatsphären-Wahrnehmung",
+        colour = "Altersgruppe"
+      )
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-12-4.png)
+
+    # ANOVA für Privatsphären-Wahrnehmung (PW)
+    anovaresult_pw <- jmv::ANOVA(df, dep = PW, factors = c("altersgruppe", "atigruppe"), 
+               emmPlots = TRUE, emmTables = TRUE, emMeans = list(c("altersgruppe"), c("atigruppe"),
+                                                                 c("altersgruppe", "atigruppe"),
+                                                                 c("atigruppe", "altersgruppe")))
+
+    # Haupteffekte und Interaktionseffekte extrahieren
+    haupteffekt1 <- anovaresult_pw$emm[[1]]$emmTable$asDF  # Haupteffekt Altersgruppe
+    haupteffekt2 <- anovaresult_pw$emm[[2]]$emmTable$asDF  # Haupteffekt Technikaffinität
+    interaktionseffekt <- anovaresult_pw$emm[[3]]$emmTable$asDF  # Interaktion Altersgruppe x Technikaffinität
+    interaktionseffekt2 <- anovaresult_pw$emm[[4]]$emmTable$asDF
+
+    # Visualisierung der Haupteffekte und Interaktionseffekte für Privatsphären-Wahrnehmung (PW)
+    haupteffekt1 %>% 
+    ggplot() +
+     aes(x = altersgruppe, y = mean, ymin = lower, ymax = upper) +
+     geom_errorbar(width = 0.2, colour = "black") +
+     geom_point() +
+     theme_minimal() +
+     labs(title = "Haupteffekt Altersgruppe auf Privatsphären-Wahrnehmung")
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-12-5.png)
+
+    haupteffekt2 %>% 
+    ggplot() +
+     aes(x = atigruppe, y = mean, ymin = lower, ymax = upper) +
+     geom_errorbar(width = 0.2, colour = "black") +
+     geom_point() +
+     theme_minimal() +
+     labs(title = "Haupteffekt Technikaffinität auf PW")
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-12-6.png)
