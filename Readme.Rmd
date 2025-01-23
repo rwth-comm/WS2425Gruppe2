@@ -238,15 +238,15 @@ mancova(df, deps = c("PW", "BI"), factors = c("altersgruppe", "atigruppe"), mult
 ##df$atigruppe <- cut(df$ATI, labels = c("niedrig", "hoch"), breaks = c(-Inf, median(df$ATI, na.rm = TRUE), Inf))
 
 # ANOVA für Nutzungseinstellung (BI)
-##anovaresult <- jmv::ANOVA(df, dep=BI, factors = c("altersgruppe", "atigruppe"), emmPlots = TRUE, emmTables = TRUE, 
+anovaresult <- jmv::ANOVA(df, dep=BI, factors = c("altersgruppe", "atigruppe"), emmPlots = TRUE, emmTables = TRUE, 
                         emMeans =list(c("altersgruppe"),c("atigruppe"),                                                                                    c("altersgruppe", "atigruppe"),
-                                                             c("atigruppe", "altersgruppe"))
+                                                             c("atigruppe", "altersgruppe")))
 
 anovaresult$main
 
 
 interaktionseffekt <- anovaresult$emm[[3]]$emmTable$asDF # Interaktion Altersgruppe x Technikaffinität
-##interaktionseffekt2 <- anovaresult$emm[[4]]$emmTable$asDF 
+interaktionseffekt2 <- anovaresult$emm[[4]]$emmTable$asDF 
 
 
 interaktionseffekt %>% 

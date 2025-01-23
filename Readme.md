@@ -393,9 +393,9 @@ Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
     ##  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
     # Altersgruppe und Technikaffinität gruppieren
-    df$altersgruppe <- cut(df$Age, labels = c("jung", "alt"), breaks = c(-Inf, median(df$Age, na.rm = TRUE), Inf))
+    ##df$altersgruppe <- cut(df$Age, labels = c("jung", "alt"), breaks = c(-Inf, median(df$Age, na.rm = TRUE), Inf))
 
-    df$atigruppe <- cut(df$ATI, labels = c("niedrig", "hoch"), breaks = c(-Inf, median(df$ATI, na.rm = TRUE), Inf))
+    ##df$atigruppe <- cut(df$ATI, labels = c("niedrig", "hoch"), breaks = c(-Inf, median(df$ATI, na.rm = TRUE), Inf))
 
     # ANOVA für Nutzungseinstellung (BI)
     anovaresult <- jmv::ANOVA(df, dep=BI, factors = c("altersgruppe", "atigruppe"), emmPlots = TRUE, emmTables = TRUE, 
@@ -415,32 +415,9 @@ Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
     ##    Residuals                    321.5241255    224      1.4353756                             
     ##  ────────────────────────────────────────────────────────────────────────────────────────────
 
-    # Haupteffekte und Interaktionseffekte extrahieren
-    haupteffekt1 <- anovaresult$emm[[1]]$emmTable$asDF  # Haupteffekt Altersgruppe
-    haupteffekt2 <- anovaresult$emm[[2]]$emmTable$asDF  # Haupteffekt Technikaffinität
     interaktionseffekt <- anovaresult$emm[[3]]$emmTable$asDF # Interaktion Altersgruppe x Technikaffinität
     interaktionseffekt2 <- anovaresult$emm[[4]]$emmTable$asDF 
 
-    # Visualisierung der Haupteffekte und Interaktionseffekte für Nutzungseinstellung (BI)
-    haupteffekt1 %>% 
-    ggplot() +
-     aes(x = altersgruppe, y = mean, ymin = lower, ymax = upper) +
-     geom_errorbar(width = 0.2, colour = "black") +
-     geom_point() +
-     theme_minimal() +
-     labs(title = "Haupteffekt Altersgruppe auf Nutzungseinstellung")
-
-![](Readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
-
-    haupteffekt2 %>% 
-    ggplot() +
-     aes(x = atigruppe, y = mean, ymin = lower, ymax = upper) +
-     geom_errorbar(width = 0.2, colour = "black") +
-     geom_point() +
-     theme_minimal() +
-     labs(title = "Haupteffekt Technikaffinität auf Nutzungseinstellung")
-
-![](Readme_files/figure-markdown_strict/unnamed-chunk-12-2.png)
 
     interaktionseffekt %>% 
       ggplot() +
@@ -454,7 +431,7 @@ Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
         y = "Mittelwert der Nutzungseinstellung",
         colour = "Altersgruppe")
 
-![](Readme_files/figure-markdown_strict/unnamed-chunk-12-3.png)
+![](Readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
     interaktionseffekt2 %>% 
       ggplot() +
@@ -470,7 +447,7 @@ Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
         colour = "Altersgruppe"
       )
 
-![](Readme_files/figure-markdown_strict/unnamed-chunk-12-4.png)
+![](Readme_files/figure-markdown_strict/unnamed-chunk-12-2.png)
 
     # ANOVA für Privatsphären-Wahrnehmung (PW)
     anovaresult_pw <- jmv::ANOVA(df, dep = PW, factors = c("altersgruppe", "atigruppe"), 
@@ -478,29 +455,6 @@ Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
                                                                  c("altersgruppe", "atigruppe"),
                                                                  c("atigruppe", "altersgruppe")))
 
-    # Haupteffekte und Interaktionseffekte extrahieren
-    haupteffekt1 <- anovaresult_pw$emm[[1]]$emmTable$asDF  # Haupteffekt Altersgruppe
-    haupteffekt2 <- anovaresult_pw$emm[[2]]$emmTable$asDF  # Haupteffekt Technikaffinität
+
     interaktionseffekt <- anovaresult_pw$emm[[3]]$emmTable$asDF  # Interaktion Altersgruppe x Technikaffinität
     interaktionseffekt2 <- anovaresult_pw$emm[[4]]$emmTable$asDF
-
-    # Visualisierung der Haupteffekte und Interaktionseffekte für Privatsphären-Wahrnehmung (PW)
-    haupteffekt1 %>% 
-    ggplot() +
-     aes(x = altersgruppe, y = mean, ymin = lower, ymax = upper) +
-     geom_errorbar(width = 0.2, colour = "black") +
-     geom_point() +
-     theme_minimal() +
-     labs(title = "Haupteffekt Altersgruppe auf Privatsphären-Wahrnehmung")
-
-![](Readme_files/figure-markdown_strict/unnamed-chunk-12-5.png)
-
-    haupteffekt2 %>% 
-    ggplot() +
-     aes(x = atigruppe, y = mean, ymin = lower, ymax = upper) +
-     geom_errorbar(width = 0.2, colour = "black") +
-     geom_point() +
-     theme_minimal() +
-     labs(title = "Haupteffekt Technikaffinität auf PW")
-
-![](Readme_files/figure-markdown_strict/unnamed-chunk-12-6.png)
