@@ -245,28 +245,9 @@ mancova(df, deps = c("PW", "BI"), factors = c("altersgruppe", "atigruppe"), mult
 anovaresult$main
 
 
-# Haupteffekte und Interaktionseffekte extrahieren
-##haupteffekt1 <- anovaresult$emm[[1]]$emmTable$asDF  # Haupteffekt Altersgruppe
-##haupteffekt2 <- anovaresult$emm[[2]]$emmTable$asDF  # Haupteffekt Technikaffinität
-##interaktionseffekt <- anovaresult$emm[[3]]$emmTable$asDF # Interaktion Altersgruppe x Technikaffinität
+interaktionseffekt <- anovaresult$emm[[3]]$emmTable$asDF # Interaktion Altersgruppe x Technikaffinität
 ##interaktionseffekt2 <- anovaresult$emm[[4]]$emmTable$asDF 
 
-# Visualisierung der Haupteffekte und Interaktionseffekte für Nutzungseinstellung (BI)
-##haupteffekt1 %>% 
-##ggplot() +
- ##aes(x = altersgruppe, y = mean, ymin = lower, ymax = upper) +
- ##geom_errorbar(width = 0.2, colour = "black") +
- ##geom_point() +
- ##theme_minimal() +
- ##labs(title = "Haupteffekt Altersgruppe auf Nutzungseinstellung")
-
-##haupteffekt2 %>% 
-##ggplot() +
-## aes(x = atigruppe, y = mean, ymin = lower, ymax = upper) +
-## geom_errorbar(width = 0.2, colour = "black") +
-## geom_point() +
-## theme_minimal() +
-## labs(title = "Haupteffekt Technikaffinität auf Nutzungseinstellung")
 
 interaktionseffekt %>% 
   ggplot() +
@@ -300,28 +281,11 @@ anovaresult_pw <- jmv::ANOVA(df, dep = PW, factors = c("altersgruppe", "atigrupp
                                                              c("altersgruppe", "atigruppe"),
                                                              c("atigruppe", "altersgruppe")))
 
-# Haupteffekte und Interaktionseffekte extrahieren
-##haupteffekt1 <- anovaresult_pw$emm[[1]]$emmTable$asDF  # Haupteffekt Altersgruppe
-##haupteffekt2 <- anovaresult_pw$emm[[2]]$emmTable$asDF  # Haupteffekt Technikaffinität
+
 interaktionseffekt <- anovaresult_pw$emm[[3]]$emmTable$asDF  # Interaktion Altersgruppe x Technikaffinität
 interaktionseffekt2 <- anovaresult_pw$emm[[4]]$emmTable$asDF
 
-# Visualisierung der Haupteffekte und Interaktionseffekte für Privatsphären-Wahrnehmung (PW)
-##haupteffekt1 %>% 
-##ggplot() +
-## aes(x = altersgruppe, y = mean, ymin = lower, ymax = upper) +
-## geom_errorbar(width = 0.2, colour = "black") +
-## geom_point() +
-## theme_minimal() +
-## labs(title = "Haupteffekt Altersgruppe auf Privatsphären-Wahrnehmung")
 
-##haupteffekt2 %>% 
-##ggplot() +
-## aes(x = atigruppe, y = mean, ymin = lower, ymax = upper) +
-## geom_errorbar(width = 0.2, colour = "black") +
-## geom_point() +
-## theme_minimal() +
-## labs(title = "Haupteffekt Technikaffinität auf PW")
 ```
 
 
