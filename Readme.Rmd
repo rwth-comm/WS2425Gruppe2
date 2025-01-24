@@ -231,62 +231,9 @@ df$atigruppe <- cut(df$ATI, labels = c("niedrig", "hoch"), breaks = c(0, median(
 mancova(df, deps = c("PW", "BI"), factors = c("altersgruppe", "atigruppe"), multivar = "wilks")
 ```
 
-```{r}
-# Altersgruppe und Technikaffinität gruppieren
-##df$altersgruppe <- cut(df$Age, labels = c("jung", "alt"), breaks = c(-Inf, median(df$Age, na.rm = TRUE), Inf))
-
-##df$atigruppe <- cut(df$ATI, labels = c("niedrig", "hoch"), breaks = c(-Inf, median(df$ATI, na.rm = TRUE), Inf))
-
-# ANOVA für Nutzungseinstellung (BI)
-anovaresult <- jmv::ANOVA(df, dep=BI, factors = c("altersgruppe", "atigruppe"), emmPlots = TRUE, emmTables = TRUE, 
-                        emMeans =list(c("altersgruppe"),c("atigruppe"),                                                                                    c("altersgruppe", "atigruppe"),
-                                                             c("atigruppe", "altersgruppe")))
-
-anovaresult$main
 
 
-interaktionseffekt <- anovaresult$emm[[3]]$emmTable$asDF # Interaktion Altersgruppe x Technikaffinität
-interaktionseffekt2 <- anovaresult$emm[[4]]$emmTable$asDF 
 
-
-interaktionseffekt %>% 
-  ggplot() +
- aes(x = atigruppe, colour = altersgruppe, y = mean, ymin = lower, ymax = upper) +
- geom_errorbar(width = 0.2, colour = "black") +
- geom_point() +
- geom_line(aes(group = altersgruppe)) +
- theme_minimal() +
- labs(title = "Interaktionseffekt zwischen Altersgruppe und Technikaffinität auf Nutzungseinstellung",
-x = "Technikaffinität",
-    y = "Mittelwert der Nutzungseinstellung",
-    colour = "Altersgruppe")
-
-interaktionseffekt2 %>% 
-  ggplot() +
-  aes(x = atigruppe, colour = altersgruppe, y = mean, ymin = lower, ymax = upper) +
-  geom_errorbar(width = 0.2, colour = "black") +
-  geom_point() +
-  geom_line(aes(group = altersgruppe)) +
-  theme_minimal() +
-  labs(
-    title = "Interaktionseffekt zwischen Altersgruppe und Technikaffinität auf Privatsphären-Wahrnehmung",
-    x = "Technikaffinität",
-    y = "Mittelwert der Privatsphären-Wahrnehmung",
-    colour = "Altersgruppe"
-  )
-
-# ANOVA für Privatsphären-Wahrnehmung (PW)
-anovaresult_pw <- jmv::ANOVA(df, dep = PW, factors = c("altersgruppe", "atigruppe"), 
-           emmPlots = TRUE, emmTables = TRUE, emMeans = list(c("altersgruppe"), c("atigruppe"),
-                                                             c("altersgruppe", "atigruppe"),
-                                                             c("atigruppe", "altersgruppe")))
-
-
-interaktionseffekt <- anovaresult_pw$emm[[3]]$emmTable$asDF  # Interaktion Altersgruppe x Technikaffinität
-interaktionseffekt2 <- anovaresult_pw$emm[[4]]$emmTable$asDF
-
-
-```
 
 
 
