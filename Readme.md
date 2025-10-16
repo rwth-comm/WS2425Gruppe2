@@ -2,10 +2,10 @@
 
 ## **Teammitglieder**
 
--   Emilia
--   Monique Beckers
--   Zehra Aksoy
--   Elcin-Havva Konar
+-   E
+-   MB
+-   ZA
+-   EHK
 
 ## **Forschungsfrage**
 
@@ -391,3 +391,4 @@ Faktorenraum ![Faktorenraum](Readme_files/Faktorenraum.jpeg)
     ##    Residuals                 PW                       323.6285026    224      1.4447701                             
     ##                              BI                       321.5241255    224      1.4353756                             
     ##  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
